@@ -11,11 +11,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline; }
   
    
-  img {
-      max-width: 50rem;
-      max-height: 90%;   /* used 90% to prevent image from overlap the arrows */  
-  }
-
   /* HTML5 display-role reset for older browsers */
   button {
     -webkit-appearance: none;
@@ -215,7 +210,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
           display: none !important; } }
     .page-container--left {
       text-align: left; }
-  
   .side-panel {
     position: relative; }
     @media (min-width: 850px) {
