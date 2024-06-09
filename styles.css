@@ -12,7 +12,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
    
   img {
-      max-width: 70rem;
+      max-width: 850px;
       max-height: 90%;   /* used 90% to prevent image from overlap the arrows */  
   }
 
