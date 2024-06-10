@@ -1,3 +1,9 @@
+<!-- 
+-- 0: bottle is empty
+-- 1: bottle is 25% full
+-- 2: bottle is 50% full
+-- 3: bottle is 75% full
+-- 4: bottle is full -->
 
 
 <html lang="">
@@ -34,7 +40,7 @@
           </div>
           <!-- <h2 class="hide-desktop">Introduction</h2> -->
           <h2>Introduction</h2>
-          <p><img src="../graphics/pug.webp" alt="pug"/></p>
+          <!-- <p><img src="../graphics/pug.webp" alt="pug"/></p> -->
           <p>I'm an experienced structured products finance trader with a heavy computer science and machine learning background.  I approach security analysis and credit risk managment with a focus on creating, automating, optimizing credit models and portfolio management tools.  I like to build appropriate systems and databases to aide the collection and processing of large unstructured data in order to applying statistical and machine learning techniques to drive more informed investment decisions in a field in which reliable and accessible data is hard to come by.</p>
           <p>My primary skillsets are secruity and credit analysis of structured products and their underlying collateral with an emphasis on esoteric asset-backed securities (such as aircraft ABS, MPL, subprime auto) and collateralized loan obligations.  I'm also a skilled programmer (primarily in python) with experience in full-stack development and database design.</p>
           <p>Because of my technical background, I've also been responsible for CMBS credit model construction, internal company risk and portfolio managment software development, figuring out different APIs from 3rd party data vendors, and just about everything automation related in the field of finance.</p>
@@ -56,26 +62,24 @@
          </ol>
           <p>In general, even basic but extremely fundamental and critical information for making investment decisions requires a rather complex technical solution with multiple stages of design, implementation, and testing that many take for granted.  With these basic building blocks, I believe that portfolio management and security analysis can be more informed and scientific manner.</p>   
          <h2>What about Machine Learning/AI?</h2>
-         <p>Before I try to tackle a problem with 1.8 trillion parameter large-language model, have I considered...</p>
+         <p>Everyone these days likes to talk about AI but before I try to tackle a problem with 1.8 trillion parameter large-language model, have I considered...</p>
          <ol>
             <li><b>Using a decision tree to help automate security selection to add to the portfolio?</b></li>
+            <p>Considering that once we know what the returns and risk profile of an indivual security is, we technically can list all of the securities we bought and rigorous learn features that we actually care about.  Perhaps this will make explicit the features we care about and add explainability and consistency to our investment decisions.</p>
             <li><b>Building a scraper to collect OTC trading data and using a linear regression (or if needed, gradient boosting) to find relationships between two datasets before trying more complicated non-linear relationships?</b></li>
+            <p>Machine learning requires data--preferably a lot of it.  While there is a tremendous amount of data avaiable, a lot is not easily accessable.  However, some trading data is publically blasted by the dealers and if you collect that systematically, you'll soon find you actually have quite a bit of data!  My ML teacher once said something to effect of, “Linear regression is awesome.  Linear regression solves a lot of problems.  If the data is not linear, try to transform it to be linear.  Don't kill mosquitos with cannons.”</p>
             <li><b>Using fuzzy matching to map different spellings and acronyms of company names to the same label?</b></li>
-            <p>AAL, Amercain Air Lines, American Airlines, American Airlines, American Airlines Group Inc., American Airlines Group Incorporated...okay, this problem might actually require use of LLMs.</p>
+            <p>Eg. AAL, Amercain Air Lines, American Airlines, American Airline, American Airlines Group Inc., American Airlines Group Incorporated...okay, this problem might actually require use of LLMs.</p>
          </ol>
           <h2 id="financeprojects">Finance Related Personal Projects</h2>
-          <p> “You are never better than your last project” ..however I have chosen to highlight my last three project as they provide good examples of my work.</p>
-          <h3 id="reppio">Reppio</h3><span class="year">2017 - </span>
-          <h4>Co-founder, designer and full-stack developer.</h4>
-          <p>Reppio is a SaaS platform for managing a flexible workforce. It lets our clients schedule, brief and communicate with their workforce. </p>
-          <p>As responsible for the product I have done everything from UX and design to front-end, back-end and mobile development.</p>
-          <p>We currently have 30+ happy (and paying) clients and our platform helped schedule and execute more than 3500 jobs.</p>
+          <p> Personal projects related to finance that I am interested in.</p>
+          <h3 id="valueinvesting">Value Investing Feature Analysis</h3><span class="year">2017 - </span>
+          <h4>TBD, using FRED API, BRE API, and python finagg package</h4>
+          <p>TBD, using FRED API, BRE API, and python finagg package</p>
           <p>Visit <a href="https://reppio.co" target="_blank">reppio.co</a></p>
-          <h3>Ejendomstorvet.dk App</h3><span class="year">2019</span>
-          <h4>React Native development</h4>
-          <p>Just finishing a large React Native project. The app allows users access and filtering of an extensive database on the go. The app integrates Google Maps and point clustering libraries to display location based data sets. </p>
-          <p>React Native was used as a platform to speed up development and to have as much shared code across platforms as possible. </p>
-          <p>Visit <a href="https://apps.apple.com/us/app/ejendomstorvet-dk/id1476403608" target="_blank">Ejendomstorvet iOS</a></p>
+          <h3 id="MC"> Monte Carlo Options Pricing Excercise</h3><span class="year">2019</span>
+          <h4>TBD</h4>
+          <p>TBD</p>
           <p>Visit <a href="https://play.google.com/store/apps/details?id=dk.ejendomstorvet.android&amp;hl=en" target="_blank">Ejendomstorvet Android</a></p>
           <h3 id="pso-happy">PsoHappy, LEO Innovation Lab</h3><span class="year">2015 - 2017</span>
           <h4>Full-stack developer and technical lead</h4>
@@ -83,6 +87,18 @@
           <p>PsoHappy is a global survey platform collecting data about the happiness of people living with psoriasis. As the technical lead of the project I was responsible for the overall architecture and as well as the back-end, front-end and mobile development.</p>
           <p>Visit <a href="https://leoinnovationlab.com/" target="_blank">LEO Innovation Lab</a></p>
           <p>Visit <a href="https://psohappy.org" target="_blank">psohappy.org</a></p>
+          <h2 id="machinelearningprojects">Machine Learning Personal Projects</h2>
+          <p> Personal projects related to machine that I am interested in or projects I have implemented in class.</p>
+          <h3 id="svm">Image Classification Using Support Vector Machines</h3><span class="year">Apr 2024</span>
+          <h4>Using SVM to classify images with ~30% accuracy.</h4>
+          <p><img src="../graphics/svm.png"></p>
+          <h3 id="cnn">Bottle Liquid Level Classification Using Convolutional Neural Network Architecture</h3><span class="year">Apr 2024</span>
+          <h4>Using a simple CNN architecture to detech how much fluid is in a bottle (scale of 0-4, 0 being empty, 4 being full) for ~80% accuracy after 100 epochs.</h4>
+          <p><img src="../graphics/bottle_preict_acc.png"></p>
+          <p><img src="../graphics/bottle_preict_result.png"></p>
+          <h3 id="cnn">Conditional Generative Adversarial Network Bottle Image Generation</h3><span class="year">Apr 2024</span>
+          <h4>Using a simple cGAN architecture to generate images of partially filled bottles (using labels 0-4 to indicate how much liquid in bottle) after 100 epochs.</h4>
+          <p><img src="../graphics/generated_bottles_CGAN.png"></p>
           <h2 id="cv">CV</h2>
           <h3>Reppio</h3><span class="year">2017 - </span>
           <p>Co-founder, designer and full-stack developer. <a href="#reppio">More info above.</a></p>
