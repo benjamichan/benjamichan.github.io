@@ -39,27 +39,29 @@
           <p>My primary skillsets are secruity and credit analysis of structured products and their underlying collateral with an emphasis on esoteric asset-backed securities (such as aircraft ABS, MPL, subprime auto) and collateralized loan obligations.  I'm also a skilled programmer (primarily in python) with experience in full-stack development and database design.</p>
           <p>Because of my technical background, I've also been responsible for CMBS credit model construction, internal company risk and portfolio managment software development, figuring out different APIs from 3rd party data vendors, and just about everything automation related in the field of finance.</p>
           <h2>Why Focus on Technology in Finance?</h2>
-          <p>My core beliefs are that many key functions in finance do not fully take advantage many of the powerful tools avaiable today.  While there has been a lot of interest in the cutting-edge of machine learning and AI, there are a lot of low-hanging 
+          <p>One of my core beliefs is that many many finance companies do not fully take advantage many of the powerful tools avaiable today.  While there has been a lot of interest in the cutting-edge of machine learning and AI, there are a lot of low-hanging 
             fruit in the field of finance that can be tackled with thoughtful and time-tested traditional and machine-learning algorithms.</p>  
          <p>Things that I am constantly thinking about and trying to figure out on my own time:</p>
           <ol>
             <li><b>Is there a way to efficently and accurately track current portfolio metrics such as market value, duration, weighted-average life, current average IRR, current portfolio yield, current portfolio spread, etc.?</b></li>
-                <p>While it seems simple on the surface, for structured products this requires real-time treasury curve/SOFR curve boot-strapping, individual bonds cashflow updates, and setting up datafeeds from the back office.  This opens up the ability to more accurately rate hedge and credit hedge your portfolio because you can furthur stratify risk by different metrics.</p>
-            <li><b>Is the current security I'm looking to purchase acretive to my portfolio yield or not?</b></li>
+                <p>While it seems simple on the surface, for structured products, this requires real-time treasury curve/SOFR curve interpolation, positon-by-position cashflow updates, and setting up datafeeds from the back office.  This opens up the ability to more accurately rate hedge and credit hedge your portfolio because you can furthur stratify risk by different metrics.</p>
+            <li><b>Is the current security I'm looking to purchase accretive to my portfolio yield or not?</b></li>
                 <p>This requires a thorough and complete implemenation of point 1 before even such a fundamental question can be answered.</p>
             <li><b>What is the best estimate for how my security or portfolio will behave in different environments and shocks?</b></li>
                 <p>This requires some measurement of portfolio performance over time (and thus requires also historical perfomrance tracking and successful completeion of element 1) to run correlations, betas, and regressions against broader market benchmarks.</p>
-            <li><b>How much exposure do I have to different asset classes and how much cash do I have on hand actually?</b></li>
+            <li><b>How much exposure do I have to different asset classes and how much cash do I actually have on hand?</b></li>
                 <p>Believe it or not, at data conferences, CTOs of well established shops still struggle with this question.</p>
+            <li><b>How do I best predict how a pool of credit will perform?</b></li>
+                <p>Do you have roll rate data?  How about collateral performance by FICO stratifaction?  How about re-sale value of the collateral?  Is there an easy way to get this data?  I most cases, no.  Are there alternative data sets out there?  If not, what's the best comparable to come up with a reasonable upper or lower bound?</p>
          </ol>
-          <p>In general, even rudimentally, basic, but extremely fundamental and critical information for making investment decisions requires a rather complex technical solution with multiple stages of design, implementation, and testing.
-            With these basic building blocks, I believe that portfolio management and security analysis can be more informed and scientific manner.</p>   
+          <p>In general, even basic but extremely fundamental and critical information for making investment decisions requires a rather complex technical solution with multiple stages of design, implementation, and testing that many take for granted.  With these basic building blocks, I believe that portfolio management and security analysis can be more informed and scientific manner.</p>   
          <h2>What about Machine Learning/AI?</h2>
          <p>Before I try to tackle a problem with 1.8 trillion parameter large-language model, have I considered...</p>
          <ol>
-            <li>Using a decision tree to help automate potential security selection to add to the portfolio?</li>
-            <li>Using a linear regression (or if needed, gradient boosting) to find relationships between two datasets?</li>
-            <li>Using fuzzy matching to map different spellings and acronyms of company names to the same label? Eg. AAL, Amercain Air Lines, American Airlines, American Airlines, American Airlines Group Inc., American Airlines Group Incorporated...okay, this problem might actually require use of LLMs</li>
+            <li><b>Using a decision tree to help automate security selection to add to the portfolio?</b></li>
+            <li><b>Using a linear regression (or if needed, gradient boosting) to find relationships between two datasets before trying more complicated non-linear relationships?</b></li>
+            <li><b>Using fuzzy matching to map different spellings and acronyms of company names to the same label?</b></li>
+            <p>AAL, Amercain Air Lines, American Airlines, American Airlines, American Airlines Group Inc., American Airlines Group Incorporated...okay, this problem might actually require use of LLMs.</p>
          </ol>
           <h2 id="financeprojects">The last 3 projects</h2>
           <p>“You are never better than your last project” ..however I have chosen to highlight my last three project as they provide good examples of my work.</p>
