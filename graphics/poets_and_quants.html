@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="1.2.5.1",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this.t.bind(this),this.touchStartHandler=this.i.bind(this),this.touchMoveHandler=this.o.bind(this),this.touchEndHandler=this.h.bind(this),this.clickHandler=this.u.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this.l(this),window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.everythingLoaded&&this.m()})),document.addEventListener("DOMContentLoaded",(()=>{this.p()})),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}k(t){document.hidden?t.t():(this.triggerEvents.forEach((e=>window.addEventListener(e,t.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler))}_(){this.triggerEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}i(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this.L(t.target,!0),this.M(t.target,"onclick","rocket-onclick"),this.C())}o(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.O()}h(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}u(t){t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this.O()}D(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))}))}l(t){EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(e,i,o){"click"!==e||t.windowLoaded||i===t.clickHandler||t.interceptedClickListeners.push({target:this,func:i,options:o}),(this||window).addEventListenerBase(e,i,o)}}L(t,e){this.interceptedClickListeners.forEach((i=>{i.target===t&&(e?t.removeEventListener("click",i.func,i.options):t.addEventListener("click",i.func,i.options))})),t.parentNode!==document.documentElement&&this.L(t.parentNode,e)}S(){return new Promise((t=>{this.T?this.O=t:t()}))}C(){this.T=!0}O(){this.T=!1}M(t,e,i){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(i,event.target.getAttribute(e)),event.target.removeAttribute(e))}t(){this._(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this.R.bind(this)):this.R()}p(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&0!==i.indexOf("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.j(t,"preconnect")}async R(){this.lastBreath=Date.now(),this.P(this),this.F(this),this.q(),this.A(),this.I(),await this.U(this.delayedScripts.normal),await this.U(this.delayedScripts.defer),await this.U(this.delayedScripts.async);try{await this.W(),await this.H(this),await this.J()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.S().then((()=>{this.D()})),this.N()}A(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async B(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),i.hasAttribute("src")?(i.addEventListener("load",o),i.addEventListener("error",(function(){i.setAttribute("data-rocket-status","failed"),e()})),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o),t.addEventListener("error",(function(){t.setAttribute("data-rocket-status","failed"),e()})),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed"),e()}}));t.setAttribute("data-rocket-status","skipped")}async U(t){const e=t.shift();return e&&e.isConnected?(await this.B(e),this.U(t)):Promise.resolve()}I(){this.j([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}j(t,e){var i=document.createDocumentFragment();t.forEach((t=>{const o=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(o){const n=document.createElement("link");n.href=o,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),i.appendChild(n),this.trash.push(n)}})),document.head.appendChild(i)}P(t){let e={};function i(i,o){return e[o].eventsToRewrite.indexOf(i)>=0&&!t.everythingLoaded?"rocket-"+i:i}function o(t,o){!function(t){e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(o)}function n(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o||function(){},set(n){t.everythingLoaded?o=n:e["rocket"+i]=o=n}})}o(document,"DOMContentLoaded"),o(window,"DOMContentLoaded"),o(window,"load"),o(window,"pageshow"),o(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}F(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){if(o&&o.fn&&!t.allJQueries.includes(o)){o.fn.ready=o.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(o):document.addEventListener("rocket-DOMContentLoaded",(()=>e.bind(document)(o))),o([])};const e=o.fn.on;o.fn.on=o.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),e.apply(this,arguments),this},t.allJQueries.push(o)}e=o}o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}async H(t){const e=document.querySelector("script[data-webpack]");e&&(await async function(){return new Promise((t=>{e.addEventListener("load",t),e.addEventListener("error",t)}))}(),await t.K(),await t.H(t))}async W(){this.domReadyFired=!0,await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async J(){await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}m(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}q(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+e);const o=document.createRange(),n=i.parentElement;let s=t.get(i);void 0===s&&(s=i.nextSibling,t.set(i,s));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),n.insertBefore(c,s)}}async G(){Date.now()-this.lastBreath>45&&(await this.K(),this.lastBreath=Date.now())}async K(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}N(){this.trash.forEach((t=>t.remove()))}static run(){const t=new RocketLazyLoadScripts;t.k(t)}}RocketLazyLoadScripts.run()})();</script>
+	
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="shortcut icon" href="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/favicon.ico">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/apple-touch-icon.png">
+	<link rel="pingback" href="https://poetsandquantsforundergrads.com/xmlrpc.php" />
+		
+	<link rel="preconnect" href="https://www.googletagmanager.com">
+	
+	
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=G-NL4J1PBNNS"></script>
+			<script type="rocketlazyloadscript">
+				window.dataLayer = window.dataLayer || [];
+  				function gtag(){dataLayer.push(arguments);}
+  				gtag('js', new Date());
+			gtag('config', 'G-NL4J1PBNNS');gtag('config', 'AW-775859391');
+			</script>
+			
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=PT+Sans+Narrow&display=swap"  rel="preload" as="style">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=PT+Sans+Narrow&display=swap" media="print" onload="this.media='all'" />
+	<noscript>
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=PT+Sans+Narrow&display=swap"/>
+	</noscript>
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v22.8 (Yoast SEO v22.8) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Poets&amp;Quants For Undergrads - 2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)</title><style id="rocket-critical-css">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,header,nav{display:block}a{background-color:transparent}strong{font-weight:700}h1{font-size:2em;margin:.67em 0}img{border:0}button,input{color:inherit;font:inherit;margin:0}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=search]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}@font-face{font-display:swap;font-family:"Glyphicons Halflings";src:url(https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/js/bootstrap/fonts/glyphicons-halflings-regular.eot);src:url(https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/js/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix) format("embedded-opentype"),url(https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/js/bootstrap/fonts/glyphicons-halflings-regular.woff2) format("woff2"),url(https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/js/bootstrap/fonts/glyphicons-halflings-regular.woff) format("woff"),url(https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/js/bootstrap/fonts/glyphicons-halflings-regular.ttf) format("truetype"),url(https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/js/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format("svg")}.glyphicon{position:relative;top:1px;display:inline-block;font-family:"Glyphicons Halflings";font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.glyphicon-search:before{content:"\e003"}.glyphicon-user:before{content:"\e008"}.glyphicon-eye-open:before{content:"\e105"}.glyphicon-comment:before{content:"\e111"}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button,input{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}.carousel-inner>.item>a>img,.img-responsive{display:block;max-width:100%;height:auto}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}h1{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1{margin-top:20px;margin-bottom:10px}h1{font-size:36px}.text-center{text-align:center}.text-uppercase{text-transform:uppercase}ol,ul{margin-top:0;margin-bottom:10px}ul ul{margin-bottom:0}.list-inline{padding-left:0;list-style:none;margin-left:-5px}.list-inline>li{display:inline-block;padding-right:5px;padding-left:5px}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.row{margin-right:-15px;margin-left:-15px}.col-md-10,.col-md-12,.col-md-2,.col-md-3,.col-md-9,.col-sm-12,.col-sm-3,.col-sm-4,.col-sm-8,.col-sm-9,.col-xs-12,.col-xs-3,.col-xs-4,.col-xs-8,.col-xs-9{position:relative;min-height:1px;padding-right:15px;padding-left:15px}.col-xs-12,.col-xs-3,.col-xs-4,.col-xs-8,.col-xs-9{float:left}.col-xs-12{width:100%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}@media (min-width:768px){.col-sm-12,.col-sm-3,.col-sm-4,.col-sm-8,.col-sm-9{float:left}.col-sm-12{width:100%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}}@media (min-width:992px){.col-md-10,.col-md-12,.col-md-2,.col-md-3,.col-md-9{float:left}.col-md-12{width:100%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}}input[type=search]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-appearance:none;-moz-appearance:none;appearance:none}.form-control{display:block;width:100%;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.form-control::-moz-placeholder{color:#999;opacity:1}.form-control:-ms-input-placeholder{color:#999}.form-control::-webkit-input-placeholder{color:#999}.form-control::-ms-expand{background-color:transparent;border:0}.form-group{margin-bottom:15px}@media (min-width:768px){.form-inline .form-group{display:inline-block;margin-bottom:0;vertical-align:middle}.form-inline .form-control{display:inline-block;width:auto;vertical-align:middle}}.btn{display:inline-block;margin-bottom:0;font-weight:400;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;background-image:none;border:1px solid transparent;padding:6px 12px;font-size:14px;line-height:1.42857143;border-radius:4px}.fade{opacity:0}.collapse{display:none}.dropdown{position:relative}.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;font-size:14px;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid #ccc;border:1px solid rgba(0,0,0,.15);border-radius:4px;-webkit-box-shadow:0 6px 12px rgba(0,0,0,.175);box-shadow:0 6px 12px rgba(0,0,0,.175)}.dropdown-menu>li>a{display:block;padding:3px 20px;clear:both;font-weight:400;line-height:1.42857143;color:#333;white-space:nowrap}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1);-webkit-overflow-scrolling:touch}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important}}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-right:15px;margin-top:8px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}.breadcrumb{padding:8px 15px;margin-bottom:20px;list-style:none;background-color:#f5f5f5;border-radius:4px}.breadcrumb>li{display:inline-block}.breadcrumb>li+li:before{padding:0 5px;color:#ccc;content:"/\00a0"}.close{float:right;font-size:21px;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;filter:alpha(opacity=20);opacity:.2}button.close{padding:0;background:0 0;border:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;overflow:hidden;-webkit-overflow-scrolling:touch;outline:0}.modal.fade .modal-dialog{-webkit-transform:translate(0,-25%);-ms-transform:translate(0,-25%);-o-transform:translate(0,-25%);transform:translate(0,-25%)}.modal-dialog{position:relative;width:auto;margin:10px}.modal-content{position:relative;background-color:#fff;background-clip:padding-box;border:1px solid #999;border:1px solid rgba(0,0,0,.2);border-radius:6px;-webkit-box-shadow:0 3px 9px rgba(0,0,0,.5);box-shadow:0 3px 9px rgba(0,0,0,.5);outline:0}.modal-body{position:relative;padding:15px}@media (min-width:768px){.modal-dialog{width:600px;margin:30px auto}.modal-content{-webkit-box-shadow:0 5px 15px rgba(0,0,0,.5);box-shadow:0 5px 15px rgba(0,0,0,.5)}}.carousel{position:relative}.carousel-inner{position:relative;width:100%;overflow:hidden}.carousel-inner>.item{position:relative;display:none}.carousel-inner>.item>a>img{line-height:1}@media all and (transform-3d),(-webkit-transform-3d){.carousel-inner>.item{-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-perspective:1000px;perspective:1000px}.carousel-inner>.item.active{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);left:0}}.carousel-inner>.active{display:block}.carousel-inner>.active{left:0}.clearfix:after,.clearfix:before,.container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before,.row:after,.row:before{display:table;content:" "}.clearfix:after,.container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after,.row:after{clear:both}.center-block{display:block;margin-right:auto;margin-left:auto}.pull-right{float:right!important}.hidden{display:none!important}@-ms-viewport{width:device-width}.visible-lg,.visible-md,.visible-sm{display:none!important}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block!important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block!important}}@media (min-width:1200px){.visible-lg{display:block!important}}@media (max-width:767px){.hidden-xs{display:none!important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none!important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none!important}}@media (min-width:1200px){.hidden-lg{display:none!important}}.navbar-brand,.navbar-nav>li>a{text-shadow:0 1px 0 rgba(255,255,255,.25)}html{position:relative;min-height:100%;overflow-x:hidden}body{background:#575a5d;font-family:'Open Sans',sans-serif;color:#575a5d;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}h1,form,ul,ol{line-height:normal;margin:0;padding:0}*{border-radius:0!important}.screen-reader-text{clip:rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute!important;width:1px}a{font-weight:bold;color:#b4252d;text-decoration:none}a img{border:0}.aligncenter,.aligncenter img{display:block;margin-left:auto;margin-right:auto}img.img-responsive{margin-bottom:15px}.wp-caption{font-size:.75em;font-weight:bold!important;margin-bottom:10px;text-align:center}.wp-caption{max-width:100%;display:table}.carousel-inner{-webkit-transform-style:preserve-3d}.btn-pq{text-shadow:none!important;font-weight:bold;background-color:#575a5d;font-family:'Open Sans',sans-serif;color:#fff!important;text-transform:uppercase;padding:6px 12px 6px 12px}#modal-ad.modal.modal{position:fixed;top:35%}#modal-ad.modal .modal-content{background:transparent!important}#modal-ad.modal .close{position:absolute;right:-20px!important;top:-20px!important;background-color:#fff!important;border-radius:15px!important;width:30px!important;height:30px!important;opacity:1!important;-moz-border-radius:15px}img#wpstats{width:0px;height:0px;overflow:hidden}#leaderboard{margin:15px auto 15px auto;width:728px;height:90px}header#site-top{padding:15px 20px 15px 25px}header#site-top .logo{padding-left:5px}header#site-top #featured-content .featured-title{font-size:.85em;text-align:center;color:#fff;margin:7px 0 7px 0}header#site-top #featured-content img{margin:0 auto}header#site-top #featured-content{height:100px;overflow:hidden;margin-top:-15px}nav.navbar#main-nav{border:0;margin-bottom:0!important;padding:10px}nav.navbar#main-nav li{font-family:'PT Sans Narrow',sans-serif;font-size:1.25em}nav.navbar#main-nav li a{font-weight:400;color:#000;text-transform:uppercase;background:url(https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/images/border-vertical.png) top right repeat-y;line-height:23px!important}nav.navbar#main-nav li.current-menu-parent a{color:#000;background-color:#fff!important}.navbar-toggle{background-color:#333!important;border:none;padding:15px 25px 10px 25px!important;margin:0px 0 0 0!important}.navbar-toggle .icon-bar{background-color:#fff!important;width:30px!important;height:6px!important;-webkit-border-radius:3px!important;border-radius:3px!important;margin-bottom:7px}nav.navbar#main-nav a.navbar-brand{background:none}.navbar-brand{margin:0!important;padding:10px!important}.collapse.navbar-collapse .share-icons{height:40px!important}#mobile-nav:not(.mm-menu){display:none}#mobile-nav .search form{margin:20px 10px}#mobile-nav .search-term{padding-right:0}.navbar-nav>li>a,.navbar-brand{padding-top:10px!important;padding-bottom:0!important;height:40px}.navbar{min-height:40px!important}.navbar-nav #nav-search{padding:10px}.navbar-nav #nav-search #search-form button{padding-left:20px}#featured-small{margin:-57px 110px 0 0;min-height:50px;max-height:50px;overflow-y:hidden}#featured-small .featured-text{margin-top:-3px;font-size:.9em;color:#fff;line-height:normal!important;float:left;display:inline;width:80px;text-align:center}#featured-small #featured-content{float:left;display:inline;width:165px}#featured-small .item{height:50px}.social{display:inline-block;height:32px;width:32px;line-height:32px;border-radius:50%!important;text-align:center;color:#fff;font-size:18px;margin:0 2.5px}.social-facebook{background-color:#425993}.social-linkedin{background-color:#3476b0}.social-rss{background-color:#ffa500}.social-soundcloud{background-color:#ff720c}.social-twitter{background-color:#6cabe8}.social-instagram{background-color:#e1003a}.social.last{margin-right:0}.moving-header{z-index:9999997}#nav-search{margin-top:-45px;width:200px;float:right}#main{background:#fff;margin:0;padding-top:25px}ol.breadcrumb{padding:7px 15px}ol.breadcrumb li{font-size:.8em}ol.breadcrumb li a{font-weight:normal}.carousel-fade .carousel-inner .item{opacity:.7}.carousel-fade .carousel-inner .active{opacity:1}article.post{clear:both;margin-bottom:25px}h1.entry-title{font-size:1.5em}.entry-meta{margin:15px 0 15px 0}.entry-meta div{text-transform:uppercase;font-size:.85em;margin:3px 0 3px 0;color:#666}.entry-meta a{font-weight:normal}.entry-content{font-size:110%}.entry-content img{padding:0;max-width:100%}.entry-social-circle{height:48px}.entry-social-circle li i{width:28px;height:28px;border-radius:50%!important;background:#efefef;text-align:center;line-height:28px;font-size:16px;margin:10px 0 5px 0}.entry-social-circle li a{color:#575a5d}.entry-social-circle .dropdown i.fa-share,.entry-social-circle .dropdown i.fa-clipboard{text-align:right}.entry-social-circle .dropdown li{border-bottom:1px solid #ddd}.entry-social-circle .dropdown a{text-transform:none}.entry-social-circle .dropdown-menu{padding-top:0;padding-bottom:0}.entry-social-circle .dropdown-menu li{font-size:90%}.entry-social-circle .dropdown-menu li a{padding:0 0 0 5px}.entry-social-circle .dropdown-menu li i{width:22px;height:22px;line-height:22px;font-size:12px}.entry-social-circle .fa-share:before{margin-right:0.3em}.copy-link span{text-transform:capitalize}.copy-link{padding:0 0 0 5px}#side-search{margin-top:25px}#search-form{width:100%;height:34px;position:relative}#search-form .form-group,#search-form .form-group input{width:100%;font-family:'Open Sans',sans-serif!important}#search-form button{position:absolute;top:0;right:0;vertical-align:bottom;height:34px;background:#efefef;border:1px solid #ccc;padding-left:10px}#modal-ad .modal-dialog{position:relative;display:table;overflow-y:auto;overflow-x:auto;width:300px;max-width:300px;margin:80px auto}#modal-ad .modal-content,#modal-ad .modal-body{margin:0!important;padding:0!important}.sidebar ul{margin:0 0 10px 0;padding:0;list-style:none}.sidebar li.widget{margin-bottom:30px;width:100%;clear:both}.sidebar .widget_pq_join_widget a.login-button{font-size:.85em;background:#ffd204;color:#353739;text-transform:uppercase;height:32px;line-height:32px;text-align:center}.sidebar .widget_pq_join_widget a.login-button:last-of-type{background:#eee}.sidebar .widget_pq_join_widget .row{margin-left:0;margin-right:0}#social-icons-side{width:100%;margin-top:15px;height:32px}.widget_pq_ads_widget{text-align:center}@media (min-width:768px){h1.entry-title{font-size:2.2em}}@media (min-width:991px){#register-link a{color:#000;font-weight:normal;float:right;height:46px;width:160px;background:url(https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/images/button-register.png) no-repeat;display:block;margin:-16px 220px 0 0}#register-link a span{display:block;margin:0 auto;width:130px;font-size:.9em;text-align:center}nav.navbar#main-nav{background:#d0d3d4;border:0;margin-bottom:0!important;padding:0}}@media (min-width:992px){.navbar-header .navbar-brand{display:none}.moving-header{top:60px;width:100%;left:0}.moving-header .container.container-affixed{margin-left:-15px}}@media (max-width:991px){#main-nav{position:fixed;z-index:999;right:0;left:0;top:0;width:100%}#main{position:relative}}@media (min-width:1024px){.no-padding-left{padding-left:0!important}.navbar-collapse.collapse{margin-left:-15px!important}.navbar-collapse.collapse li.first{padding-left:15px}nav.navbar#main-nav li:last-of-type a{background:none}}@media (min-width:1200px){#mobile-nav{display:none!important}.col-md-9.pq-main{width:70.8%}.col-md-3.pq-main{width:29.2%}}@media (max-width:1200px) and (min-width:992px){.col-md-9.pq-main{width:64.5%}.col-md-3.pq-main{width:35.5%}#register-link a{margin:-16px 40px 0 0}#leaderboard{height:100px}}@media (max-width:1024px){.no-padding-left{padding-left:0!important}}@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape){.container{padding:0;margin:0;width:100%!important}}@media screen and (max-width:1024px) and (min-width:568px) and (orientation:landscape){nav.navbar#main-nav{padding:0!important}.navbar-toggle{margin-right:0px!important}}@media (max-width:991px){nav.navbar#main-nav{border:0;margin-bottom:0!important;padding:10px}.navbar-header{float:none}.navbar-toggle{display:block}.navbar-collapse{border-top:1px solid transparent;box-shadow:inset 0 1px 0 rgba(255,255,255,0.1)}.navbar-collapse.collapse{display:none!important}.navbar-nav{float:none!important;margin:7.5px -15px}.navbar-nav>li{float:none}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px}#main-nav{padding:0!important}}@media (max-width:991px) and (min-width:667px){.sidebar{margin:0 0 30px 30px!important}}@media (max-width:991px) and (min-width:768px){.navbar-toggle{margin-top:0!important}}@media (max-width:768px){body{margin-top:60px}.container{padding:0;margin:0;width:100%!important}.col-md-9.pq-main{padding:0}.col-md-3.pq-main{padding:0}.sidebar .col-md-12{margin-left:-15px!important}.sidebar .widget_pq_ads_widget{margin:0 auto 30px auto!important;width:300px!important}.navbar{position:fixed;z-index:100;right:0;left:0;top:0}#leaderboard{display:none}}@media screen and (min-width:768px) and (max-width:1024px) and (orientation:portrait){body{margin-top:0}}@media only screen and (max-width:480px){.container{padding:0!important}.sidebar{margin-top:30px}.sidebar.no-padding-left{padding-left:30px!important}.navbar-toggle{padding:15px 20px 10px 20px!important}.navbar-brand{max-width:235px}}@media only screen and (min-device-width:375px) and (max-device-width:667px) and (orientation:landscape){a.navbar-brand img{margin-top:-4px!important}.navbar-toggle{margin-top:0!important}}@media only screen and (min-device-width:375px) and (max-device-width:667px) and (orientation:portrait){a.navbar-brand img{margin-top:-4px}}@media only screen and (max-device-width:320px) and (orientation:portrait){a.navbar-brand img{max-width:220px}}.pqu{background:#f1f1f2!important;color:#333}header#site-top,header#site-top #featured-content{background:#fff}nav.navbar#main-nav{background:#fff}.pqu header#site-top #featured-content .featured-title{color:#575a5d}#leaderboard{margin-bottom:30px}nav.navbar#main-nav{background:#545e65 url(https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/bg-nav.png?v5) top left repeat-x!important;min-height:44px!important}.pqu nav.navbar#main-nav li a{font-size:1.1em;color:#fff;background:url(https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/nav-border-vertical.png) top left repeat-y!important;padding:0 19.95px 0 19.95px;height:35px!important}.pqu nav.navbar#main-nav li.current-menu-parent a{color:#fff;background:url(https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/bg-nav-hover.png) top left repeat-x!important}.pqu nav.navbar#main-nav li.first>a{background:none!important}.pqu .navbar-toggle{background-color:#82898f!important;border:none!important}.pqu nav.navbar#main-nav li a{padding:0 20.25px 0 20.25px}@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm){.pqu nav.navbar#main-nav li a{padding:0 20px 0 20px}}.pqu .breadcrumb li a,.pqu .entry-meta a{color:#09b06a}@media (min-width:1200px){.pqu nav.navbar#main-nav li a{line-height:19px!important}}@media (min-width:991px){.pqu nav.navbar#main-nav ul{width:101.5%!important}.pqu nav.navbar::before{content:" ";background:url(https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/bg-nav-left.png) top left no-repeat!important;position:absolute;left:-14px;width:14px;height:49px}.pqu nav.navbar::after{content:" ";background:url(https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/bg-nav-right.png) top right no-repeat!important;position:absolute;right:-13px;width:14px;top:0px;height:49px}}@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape){nav.navbar#main-nav li{font-size:1.25em!important}}@media (max-width:1200px) and (min-width:1025px){.pqu nav.navbar#main-nav li{font-size:1.1em}.pqu nav.navbar#main-nav li a{padding:0 14.2px 0 14.2px!important;line-height:38px!important}.pqu nav.navbar#main-nav ul{width:102.5%!important}.pqu nav.navbar#main-nav li a{padding-left:14.5px!important;padding-right:14.5px!important}}@media (max-width:1024px) and (min-width:992px){.pqu nav.navbar#main-nav ul{width:103.5%!important;margin-left:-15px}.pqu nav.navbar#main-nav li a{padding:0 13.85px 0 13.85px;line-height:19px!important}.pqu nav.navbar::before{top:0!important}.pqu nav.navbar#main-nav ul{width:106%!important;margin-left:-25px;margin-top:-10px}.pqu nav.navbar#main-nav li a{padding-left:15px;padding-right:15px!important}}@media (max-width:991px){.pqu nav.navbar#main-nav{background-color:#606a73!important;background-image:none!important}.pqu nav.navbar#main-nav li a{background-image:none!important;color:#333!important;padding-right:0!important}.pqu nav.navbar::before{background:none!important}.pqu nav.navbar::after{background:none!important}a.navbar-brand img{margin-top:-5px!important;margin-left:-0!important}}@media (max-width:768px){a.navbar-brand{margin-top:-3px!important;margin-left:-5px!important}}@media (max-width:320px){a.navbar-brand{margin-left:-22px!important}}:root{--mm-line-height:20px;--mm-listitem-size:44px;--mm-navbar-size:44px;--mm-offset-top:0;--mm-offset-right:0;--mm-offset-bottom:0;--mm-offset-left:0;--mm-color-border:rgba(0, 0, 0, 0.1);--mm-color-button:rgba(0, 0, 0, 0.3);--mm-color-text:rgba(0, 0, 0, 0.75);--mm-color-text-dimmed:rgba(0, 0, 0, 0.3);--mm-color-background:#f3f3f3;--mm-color-background-highlight:rgba(0, 0, 0, 0.05);--mm-color-background-emphasis:rgba(255, 255, 255, 0.4);--mm-shadow:0 0 10px rgba(0, 0, 0, 0.3)}:root{--mm-iconbar-size:50px}:root{--mm-iconpanel-size:50px}:root{--mm-sidebar-collapsed-size:50px;--mm-sidebar-expanded-size:440px}</style><link rel="preload" as="image" href="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017.png" imagesrcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017.png 648w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017-300x200.png 300w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017-90x60.png 90w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017-96x64.png 96w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017-375x250.png 375w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017-630x420.png 630w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017-180x120.png 180w" imagesizes="(max-width: 648px) 100vw, 648px" fetchpriority="high">
+	<meta name="description" content="Read more about on Poets&amp;Quants for Undergrads" />
+	<link rel="canonical" href="https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)" />
+	<meta property="og:description" content="Read more about on Poets&amp;Quants for Undergrads" />
+	<meta property="og:url" content="https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/" />
+	<meta property="og:site_name" content="Poets&amp;Quants for Undergrads" />
+	<meta property="article:publisher" content="https://www.facebook.com/poetsandquantsforundergrads/" />
+	<meta property="article:published_time" content="2017-04-09T14:35:00+00:00" />
+	<meta property="og:image" content="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017.png" />
+	<meta property="og:image:width" content="648" />
+	<meta property="og:image:height" content="432" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="author" content="Jeff Schmitt" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@PoetsAndQuantsU" />
+	<meta name="twitter:site" content="@PoetsAndQuantsU" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Jeff Schmitt" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="4 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/#article","isPartOf":{"@id":"https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/"},"author":"Jeff Schmitt","headline":"2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)","datePublished":"2017-04-09T14:35:00+00:00","dateModified":"2017-04-09T14:35:00+00:00","mainEntityOfPage":{"@id":"https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/"},"wordCount":817,"commentCount":0,"publisher":{"@id":"https://poetsandquantsforundergrads.com/#organization"},"image":{"@id":"https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/#primaryimage"},"thumbnailUrl":"https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017.png","keywords":["Benjamin Chang","Best &amp; Brightest","business major","business school","Carnegie Mellon University","Tepper School of Business","undergraduate"],"articleSection":["Students"],"inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/#respond"]}],"copyrightYear":"2017","copyrightHolder":{"@id":"https://weseegenius.com/#organization"}},{"@type":"WebPage","@id":"https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/","url":"https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/","name":"Poets&Quants For Undergrads - 2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)","isPartOf":{"@id":"https://poetsandquantsforundergrads.com/#website"},"primaryImageOfPage":{"@id":"https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/#primaryimage"},"image":{"@id":"https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/#primaryimage"},"thumbnailUrl":"https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017.png","datePublished":"2017-04-09T14:35:00+00:00","dateModified":"2017-04-09T14:35:00+00:00","description":"Read more about on Poets&amp;Quants for Undergrads","breadcrumb":{"@id":"https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/"]}],"author":"Jeff Schmitt"},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/#primaryimage","url":"https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017.png","contentUrl":"https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017.png","width":648,"height":432},{"@type":"BreadcrumbList","@id":"https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://poetsandquantsforundergrads.com/"},{"@type":"ListItem","position":2,"name":"2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)"}]},{"@type":"WebSite","@id":"https://poetsandquantsforundergrads.com/#website","url":"https://poetsandquantsforundergrads.com/","name":"Poets&amp;Quants for Undergrads","description":"","publisher":{"@id":"https://poetsandquantsforundergrads.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://poetsandquantsforundergrads.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://poetsandquantsforundergrads.com/#organization","name":"Poets&Quants for Undergrads","url":"https://poetsandquantsforundergrads.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://poetsandquantsforundergrads.com/#/schema/logo/image/","url":"https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2023/03/logo-385x67-1.png","contentUrl":"https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2023/03/logo-385x67-1.png","width":385,"height":67,"caption":"Poets&Quants for Undergrads"},"image":{"@id":"https://poetsandquantsforundergrads.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/poetsandquantsforundergrads/","https://x.com/PoetsAndQuantsU","https://www.instagram.com/pqforundergrads","https://www.linkedin.com/company/18125565/admin/","https://www.youtube.com/channel/UC-RQEss89LFeacJoZArcK0g"]},{"@type":"Person","@id":"https://poetsandquantsforundergrads.com/#/schema/person/63ade7cdeb51ad691a1634b890e0671b","name":"Jeff Schmitt","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://poetsandquantsforundergrads.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/5f9b622a3659f9e3e94497346649142d?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/5f9b622a3659f9e3e94497346649142d?s=96&d=mm&r=g","caption":"Jeff Schmitt"},"url":"https://poetsandquantsforundergrads.com/author/jschmitt/"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//a.omappapi.com' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="Poets&amp;Quants for Undergrads &raquo; Feed" href="https://poetsandquantsforundergrads.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Poets&amp;Quants for Undergrads &raquo; Comments Feed" href="https://poetsandquantsforundergrads.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Poets&amp;Quants for Undergrads &raquo; 2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper) Comments Feed" href="https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/feed/" />
+<link rel='preload'  href='https://poetsandquantsforundergrads.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://poetsandquantsforundergrads.com/wp-includes/js/mediaelement/wp-mediaelement.min.css' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<style id='jetpack-sharing-buttons-style-inline-css' type='text/css'>
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<link data-minify="1" rel='preload'  href='https://poetsandquantsforundergrads.com/wp-content/cache/min/3/wp-content/themes/pq-resp/js/bootstrap/css/bootstrap.min.css?ver=1714022137' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/js/bootstrap/css/bootstrap-theme.min.css' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://poetsandquantsforundergrads.com/wp-content/cache/min/3/wp-content/themes/pq-resp/style.css?ver=1714022137' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://poetsandquantsforundergrads.com/wp-content/cache/min/3/wp-content/themes/pqu/style.css?ver=1714022137' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://poetsandquantsforundergrads.com/wp-content/cache/min/3/wp-content/themes/pq-resp/style-mmenu.css?ver=1714022137' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<script type="text/javascript" src="https://poetsandquantsforundergrads.com/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://poetsandquantsforundergrads.com/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/js/cookies.js?1718252731" id="cookies-js"></script>
+<script type="text/javascript" src="https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/js/page-views.js?1718252731" id="pq-page-views-js"></script>
+<script type="text/javascript" src="https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/js/mmenu.js?1718252731" id="mmenu-js"></script>
+<link rel="https://api.w.org/" href="https://poetsandquantsforundergrads.com/wp-json/" /><link rel="alternate" type="application/json" href="https://poetsandquantsforundergrads.com/wp-json/wp/v2/posts/7784" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://poetsandquantsforundergrads.com/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://poetsandquantsforundergrads.com/?p=7784' />
+<link rel="alternate" type="application/json+oembed" href="https://poetsandquantsforundergrads.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpoetsandquantsforundergrads.com%2Fstudents%2F2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://poetsandquantsforundergrads.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpoetsandquantsforundergrads.com%2Fstudents%2F2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper%2F&#038;format=xml" />
+	<style>img#wpstats{display:none}</style>
+		
+		<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+			jQuery(document).ready(function($) {
+				$("nav.navbar#main-nav li").hover(function() {
+					if ( $(this).hasClass("first") )
+	       				$("nav.navbar").toggleClass("hover");
+	       			else if ( $(this).hasClass("last") )
+	       				$("nav.navbar").toggleClass("hover-right");
+    			});
+    		});	
+		</script>
+		<script type="rocketlazyloadscript" async data-rocket-src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<script type="rocketlazyloadscript">
+  			var googletag = googletag || {};
+  			googletag.cmd = googletag.cmd || [];
+		</script>
+		<script type="rocketlazyloadscript">
+  			googletag.cmd.push(function() {
+    				googletag.defineSlot("/4320129/pqu-above-the-fold-sidebar-box", [300, 250], "div-gpt-ad-1489169796612-0").addService(googletag.pubads());
+    				googletag.defineSlot("/4320129/pqu-spans-the-fold-ros-sidebar-box", [300, 250], "div-gpt-ad-1489169796612-4").addService(googletag.pubads());
+    				googletag.defineSlot("/4320129/pqu-below-the-fold-ros-sidebar-box", [300, 250], "div-gpt-ad-1489169796612-1").addService(googletag.pubads());
+   					googletag.defineSlot("/4320129/pqu-leaderboard-ros", [728, 90], "div-gpt-ad-1489169796612-3").addService(googletag.pubads());
+    				googletag.defineSlot("/4320129/pqu-roadblock-ros", [300, 250], "div-gpt-ad-1552588455487-0").addService(googletag.pubads());
+    				googletag.defineSlot("/4320129/pqu-fluid", [1, 1], "div-gpt-ad-1558440862787-0").addService(googletag.pubads());
+    				googletag.defineSlot("/4320129/pqu-atf-vertical", [300, 600], "div-gpt-ad-1584362366323-0").addService(googletag.pubads());
+					googletag.pubads().enableSingleRequest();
+    				googletag.pubads().collapseEmptyDivs();
+   					
+   		 	googletag.pubads().setTargeting("pqu-categories", ["students"]);
+   		 	googletag.pubads().setTargeting("url", ["2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper"]);
+		 	googletag.pubads().setTargeting("post-id", ["7784"]);
+   		 
+   					googletag.pubads().setTargeting("environment", ["production"]);
+    				googletag.enableServices();
+    				
+    				// See if the pqu-roadblock-ros has an ad to serve
+    				googletag.pubads().addEventListener("slotRenderEnded", function(event) {
+    				if (event.slot.getSlotElementId() == "div-gpt-ad-1552588455487-0") {
+	    				var info = event.slot.getResponseInformation();
+	    				if ( info !== null )
+        					jQuery("#modal-ad").modal("show");
+    				}
+    				if (event.slot.getSlotElementId() == "div-gpt-ad-1558440862787-0") {
+	    				var info = event.slot.getResponseInformation();
+	    				if ( info !== null )
+        					jQuery(document).ready(function(){
+								setTimeout(function(){
+								jQuery("#pq-takeover-output").dialog({autoOpen: true,dialogClass: "pq-takeover-dialog",draggable: false,modal: true,closeText:""});
+								}, 	3000)
+							});
+    				}
+				});
+  			});
+  		</script>
+  		<!-- Facebook Pixel Code -->
+		<script type="rocketlazyloadscript">
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window,document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+ 			fbq('init', '411392026399270'); 
+			fbq('track', 'PageView');
+			</script>
+			<noscript>
+ 			<img height="1" width="1" 
+			src="https://www.facebook.com/tr?id=411392026399270&ev=PageView
+			&noscript=1"/>
+			</noscript>
+			<!-- End Facebook Pixel Code -->
+			<script type="rocketlazyloadscript">jQuery(document).ready(function($){
+				$("#mobile-nav").mmenu({
+					"extensions": [
+					"position-front",
+					"position-left",
+				],
+				classNames: {
+					fixedElements: {
+						fixed: "fix",
+						sticky: "stick"
+					}
+				},
+				"iconbar": {
+                  	"use": true,
+                  	"top": [
+                     	"<a href='https://poetsandquantsforundergrads.com'><i class='fa fa-home'></i></a>",
+                  	],
+                  	"bottom": [
+                     	"<a href='http://twitter.com/PoetsAndQuantsU' onclick=\"gtag('event', 'click', {'event_category': 'Mobile Menu Social Account','event_label': 'Twitter',});\"><i class='fab fa-x-twitter'></i></a>",
+                     	"<a href='/feed' onclick=\"gtag('event', 'click', {'event_category': 'Mobile Menu Social Account','event_label': 'RSS',});\"><i class='fas fa-rss'></i></a>",
+                     	"<a href='https://www.facebook.com/poetsandquantsforundergrads' onclick=\"gtag('event', 'click', {'event_category': 'Mobile Menu Social Account','event_label': 'Facebook',});\"><i class='fab fa-facebook'></i></a>",
+                     	"<a href='http://www.linkedin.com/groups?gid=3149417&#038;trk=myg_ugrp_ovr' onclick=\"gtag('event', 'click', {'event_category': 'Mobile Menu Social Account','event_label': 'LinkedIn',});\"></i></a>",
+                     	"<a href='' onclick=\"gtag('event', 'click', {'event_category': 'Mobile Menu Social Account','event_label': 'YouTube',});\"><i class='fab fa-youtube'></i></a>",
+                     	"<a href='https://soundcloud.com/poetsandquants' onclick=\"gtag('event', 'click', {'event_category': 'Mobile Menu Social Account','event_label': 'SoundCloud',});\"><i class='fab fa-soundcloud'></i></a>"
+                  	]
+               	},
+				navbars: [{position:"top"}],                
+				wrappers: ["wordpress"],
+				navbar: {title: "Explore Poets&amp;Quants for Undergrads"}
+			});
+			
+            $('#mobile-nav .menu-item-has-children').each(function() {
+                let content = $(this).find('.mm-listitem__text').html();
+                $(this).closest('.menu-item').find('.mm-listitem__btn').html(content);
+                $(this).find('.mm-listitem__text').remove();
+		   	 });
+			});
+		</script><meta name="is-school-profile" content="0" /><script type="rocketlazyloadscript">
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
+return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
+if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
+setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
+var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
+if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
+else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
+</script>	 <link rel="stylesheet" href="https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/style-print.css?v=3" type="text/css" media="print"/>
+			<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		<!--
+			if (top.location!= self.location) {
+			top.location = self.location.href
+			}
+		//-->
+		</script>
+	</head>
+
+<body class="post-template-default single single-post postid-7784 single-format-standard pqu post-2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper category-students" ontouchstart="">
+	
+		<div id="leaderboard">
+			<div id="div-gpt-ad-1489169796612-3" style="min-height:90px; min-width:728px;">
+				<script type="rocketlazyloadscript">
+					googletag.cmd.push(function() { googletag.display("div-gpt-ad-1489169796612-3"); });
+				</script>
+			</div>
+		</div>
+	   
+    <div class="container">	
+		<!-- START Header -->
+					        		<div id="register-link" class="hidden-xs hidden-sm hidden-phone">
+           			<a href="/register" title="Register"><span>Stay informed.<br /><strong>Sign Up!</strong></span></a>
+				</div>
+							<header id="site-top" class="hidden-xs hidden-sm hidden-phone">
+			<div class="logo col-md-10">
+				<a href="https://poetsandquantsforundergrads.com" title="Home">
+			<picture>
+    			<!--[if IE 9]><video style="display: none;"><![endif]-->
+    			<source media="(min-width: 992px)" width="775" height="100" srcset="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo.png 1x, https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo-2x.png 2x">
+   				<source media="(max-width: 991px)" width="221" height="55" srcset="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo-sm.png 1x, https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo-sm-2x.png 2x">
+   				<source media="(max-width: 480px)" width="441" height="110" srcset="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo-xs.png 1x, https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo-xs-2x.png 2x">
+   				<!-[if IE 9]></video><![endif]-->
+    			<img src="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo.png" alt="PQ Logo"  width="775" height="100" />
+			</picture>
+		</a>
+			</div>
+			<div class="pull-right col-md-2">
+				<div id="featured-content" class="carousel slide carousel-fade" data-ride="carousel" aria-label="Featured Schools"><div class="featured-title visible-md visible-lg">Featured Schools</div><div class="carousel-inner"><div class="item active"><a class="center-block" href="https://poetsandquantsforundergrads.com/school-profile/college-new-jersey-school-business/" onclick="
+					gtag('event', 'click', {
+  						'event_category': 'Featured School',
+  						'event_label': 'https://poetsandquantsforundergrads.com/school-profile/college-new-jersey-school-business/',
+					});
+				"><img width="170" height="37" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/TCNJ.jpg" class="attachment-440x200 size-440x200 wp-post-image" alt="" decoding="async" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/TCNJ.jpg 170w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/TCNJ-165x37.jpg 165w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/TCNJ-150x33.jpg 150w" sizes="(max-width: 170px) 100vw, 170px" /></a></div><div class="item"><a class="center-block" href="https://poetsandquantsforundergrads.com/school-profile/university-illinois-urbana-champaign-college-business/" onclick="
+					gtag('event', 'click', {
+  						'event_category': 'Featured School',
+  						'event_label': 'https://poetsandquantsforundergrads.com/school-profile/university-illinois-urbana-champaign-college-business/',
+					});
+				"><img width="750" height="341" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-750x341.jpg" class="attachment-440x200 size-440x200 wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-750x341.jpg 750w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-300x136.jpg 300w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-768x349.jpg 768w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-132x60.jpg 132w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-385x175.jpg 385w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-220x100.jpg 220w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-264x120.jpg 264w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px.jpg 917w" sizes="(max-width: 440px) 100vw, 440px" /></a></div><div class="item"><a class="center-block" href="https://poetsandquantsforundergrads.com/school-profile/rutgers-business-school-new-brunswick/" onclick="
+					gtag('event', 'click', {
+  						'event_category': 'Featured School',
+  						'event_label': 'https://poetsandquantsforundergrads.com/school-profile/rutgers-business-school-new-brunswick/',
+					});
+				"><img width="170" height="90" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/02/RBS-Logo_Small_170x90.jpg" class="attachment-440x200 size-440x200 wp-post-image" alt="" decoding="async" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/02/RBS-Logo_Small_170x90.jpg 170w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/02/RBS-Logo_Small_170x90-113x60.jpg 113w" sizes="(max-width: 170px) 100vw, 170px" /></a></div><div class="item"><a class="center-block" href="https://poetsandquantsforundergrads.com/school-profile/providence-college-school-business/" onclick="
+					gtag('event', 'click', {
+  						'event_category': 'Featured School',
+  						'event_label': 'https://poetsandquantsforundergrads.com/school-profile/providence-college-school-business/',
+					});
+				"><img width="2997" height="1488" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1.png" class="attachment-440x200 size-440x200 wp-post-image" alt="" decoding="async" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1.png 2997w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-300x149.png 300w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-1024x508.png 1024w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-768x381.png 768w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-1536x763.png 1536w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-2048x1017.png 2048w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-121x60.png 121w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-385x191.png 385w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-750x372.png 750w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-242x120.png 242w" sizes="(max-width: 403px) 100vw, 403px" /></a></div><div class="item"><a class="center-block" href="https://poetsandquantsforundergrads.com/school-profile/indiana-university-kelley-school-business/" onclick="
+					gtag('event', 'click', {
+  						'event_category': 'Featured School',
+  						'event_label': 'https://poetsandquantsforundergrads.com/school-profile/indiana-university-kelley-school-business/',
+					});
+				"><img width="150" height="50" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2014/10/Kelley-logo.jpeg" class="attachment-440x200 size-440x200 wp-post-image" alt="" decoding="async" /></a></div><div class="item"><a class="center-block" href="https://poetsandquantsforundergrads.com/school-profile/hult-international-business-school/" onclick="
+					gtag('event', 'click', {
+  						'event_category': 'Featured School',
+  						'event_label': 'https://poetsandquantsforundergrads.com/school-profile/hult-international-business-school/',
+					});
+				"><img width="170" height="90" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/hult.jpg" class="attachment-440x200 size-440x200 wp-post-image" alt="" decoding="async" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/hult.jpg 170w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/hult-113x60.jpg 113w" sizes="(max-width: 170px) 100vw, 170px" /></a></div></div></div>			</div>
+			<div class="clearfix"></div>
+		</header>
+		<!-- END Header -->
+		
+		<!-- START Navigation -->
+				<div class="moving-header" data-spy="affix" data-offset-top="268">
+			<div class="container container-affixed">
+				<nav class="navbar" id="main-nav" role="navigation">
+        			<div class="navbar-header">
+            			<a class="navbar-toggle" href="#mobile-nav">
+               				<span class="sr-only">Toggle navigation</span>
+                			<span class="icon-bar"></span>
+                			<span class="icon-bar"></span>
+                			<span class="icon-bar"></span>
+            			</a>
+            			<a class="navbar-brand" href="/">
+			<picture>
+    			<!--[if IE 9]><video style="display: none;"><![endif]-->
+    			<source media="(min-width: 992px)" width="775" height="100" srcset="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo.png 1x, https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo-2x.png 2x">
+   				<source media="(max-width: 991px)" width="221" height="55" srcset="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo-sm.png 1x, https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo-sm-2x.png 2x">
+   				<source media="(max-width: 480px)" width="441" height="110" srcset="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo-xs.png 1x, https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo-xs-2x.png 2x">
+   				<!-[if IE 9]></video><![endif]-->
+    			<img src="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/logo.png" alt="PQ Logo"  width="775" height="100" />
+			</picture>
+		</a>
+        			</div>
+					<div id="featured-small" class="visible-sm pull-right">
+						<div class="featured-text">Today's Featured Schools</div><div id="featured-content" class="carousel slide carousel-fade" data-ride="carousel" aria-label="Featured Schools"><div class="featured-title visible-md visible-lg">Featured Schools</div><div class="carousel-inner"><div class="item active"><a class="center-block" href="https://poetsandquantsforundergrads.com/school-profile/college-new-jersey-school-business/" onclick="
+					gtag('event', 'click', {
+  						'event_category': 'Featured School',
+  						'event_label': 'https://poetsandquantsforundergrads.com/school-profile/college-new-jersey-school-business/',
+					});
+				"><img width="170" height="37" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/TCNJ.jpg" class="attachment-440x200 size-440x200 wp-post-image" alt="" decoding="async" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/TCNJ.jpg 170w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/TCNJ-165x37.jpg 165w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/TCNJ-150x33.jpg 150w" sizes="(max-width: 170px) 100vw, 170px" /></a></div><div class="item"><a class="center-block" href="https://poetsandquantsforundergrads.com/school-profile/university-illinois-urbana-champaign-college-business/" onclick="
+					gtag('event', 'click', {
+  						'event_category': 'Featured School',
+  						'event_label': 'https://poetsandquantsforundergrads.com/school-profile/university-illinois-urbana-champaign-college-business/',
+					});
+				"><img width="750" height="341" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-750x341.jpg" class="attachment-440x200 size-440x200 wp-post-image" alt="" decoding="async" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-750x341.jpg 750w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-300x136.jpg 300w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-768x349.jpg 768w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-132x60.jpg 132w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-385x175.jpg 385w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-220x100.jpg 220w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px-264x120.jpg 264w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2016/12/PQ_ILGIES220x100px.jpg 917w" sizes="(max-width: 440px) 100vw, 440px" /></a></div><div class="item"><a class="center-block" href="https://poetsandquantsforundergrads.com/school-profile/rutgers-business-school-new-brunswick/" onclick="
+					gtag('event', 'click', {
+  						'event_category': 'Featured School',
+  						'event_label': 'https://poetsandquantsforundergrads.com/school-profile/rutgers-business-school-new-brunswick/',
+					});
+				"><img width="170" height="90" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/02/RBS-Logo_Small_170x90.jpg" class="attachment-440x200 size-440x200 wp-post-image" alt="" decoding="async" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/02/RBS-Logo_Small_170x90.jpg 170w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/02/RBS-Logo_Small_170x90-113x60.jpg 113w" sizes="(max-width: 170px) 100vw, 170px" /></a></div><div class="item"><a class="center-block" href="https://poetsandquantsforundergrads.com/school-profile/providence-college-school-business/" onclick="
+					gtag('event', 'click', {
+  						'event_category': 'Featured School',
+  						'event_label': 'https://poetsandquantsforundergrads.com/school-profile/providence-college-school-business/',
+					});
+				"><img width="2997" height="1488" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1.png" class="attachment-440x200 size-440x200 wp-post-image" alt="" decoding="async" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1.png 2997w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-300x149.png 300w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-1024x508.png 1024w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-768x381.png 768w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-1536x763.png 1536w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-2048x1017.png 2048w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-121x60.png 121w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-385x191.png 385w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-750x372.png 750w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/11/20190-pcsb-formal-logo-black-1-242x120.png 242w" sizes="(max-width: 403px) 100vw, 403px" /></a></div><div class="item"><a class="center-block" href="https://poetsandquantsforundergrads.com/school-profile/indiana-university-kelley-school-business/" onclick="
+					gtag('event', 'click', {
+  						'event_category': 'Featured School',
+  						'event_label': 'https://poetsandquantsforundergrads.com/school-profile/indiana-university-kelley-school-business/',
+					});
+				"><img width="150" height="50" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2014/10/Kelley-logo.jpeg" class="attachment-440x200 size-440x200 wp-post-image" alt="" decoding="async" /></a></div><div class="item"><a class="center-block" href="https://poetsandquantsforundergrads.com/school-profile/hult-international-business-school/" onclick="
+					gtag('event', 'click', {
+  						'event_category': 'Featured School',
+  						'event_label': 'https://poetsandquantsforundergrads.com/school-profile/hult-international-business-school/',
+					});
+				"><img width="170" height="90" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/hult.jpg" class="attachment-440x200 size-440x200 wp-post-image" alt="" decoding="async" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/hult.jpg 170w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/hult-113x60.jpg 113w" sizes="(max-width: 170px) 100vw, 170px" /></a></div></div></div>					</div>
+					
+					<div id="navbar" class="collapse navbar-collapse ">
+						<ul class="hidden-md hidden-lg hidden-xl nav navbar-nav">
+							<li id="nav-search"><form role="search" method="get" id="search-form" class="form-inline search-form" action="https://poetsandquantsforundergrads.com/">
+	<div class="form-group">
+      	<span class="screen-reader-text">Search for:</span>
+      	<input type="search" class="form-control" value="" name="s" placeholder="Search" />
+   	</div>
+	<button type="submit"><span class="glyphicon glyphicon-search"></span></button>
+</form>
+</li>
+														<li><a href="/wp-login.php" title="Sign In">Sign In</a></li>
+							<li><a href="/register" title="Register">Register</a></li>
+								
+						</ul>
+						<ul itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" class="nav navbar-nav" id="menu-desktop-navigation"><li id="menu-item-16681" class="first menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-16681"><a itemprop="url" class="nav-link"  title="Home" href="https://poetsandquantsforundergrads.com/" onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Navigation Menu',
+  			'event_label': 'Home'
+		});
+	">Home</a></li>
+<li id="menu-item-16682" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16682"><a itemprop="url" class="nav-link"  title="News" href="https://poetsandquantsforundergrads.com/category/news/" onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Navigation Menu',
+  			'event_label': 'News'
+		});
+	">News</a></li>
+<li id="menu-item-16684" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16684"><a itemprop="url" class="nav-link"  title="Rankings" href="https://poetsandquantsforundergrads.com/category/rankings/" onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Navigation Menu',
+  			'event_label': 'Rankings'
+		});
+	">Rankings</a></li>
+<li id="menu-item-16691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16691"><a itemprop="url" class="nav-link"  title="Schools" target="_blank" href="https://poetsandquantsforundergrads.com/school-profiles/" onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Navigation Menu',
+  			'event_label': 'Schools'
+		});
+	">Schools</a></li>
+<li id="menu-item-16683" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-16683"><a itemprop="url" class="nav-link"  title="Students" href="https://poetsandquantsforundergrads.com/category/students/" onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Navigation Menu',
+  			'event_label': 'Students'
+		});
+	">Students</a></li>
+<li id="menu-item-16686" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16686"><a itemprop="url" class="nav-link"  title="Admissions" target="_blank" href="https://poetsandquantsforundergrads.com/category/admissions/" onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Navigation Menu',
+  			'event_label': 'Admissions'
+		});
+	">Admissions</a></li>
+<li id="menu-item-157910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157910"><a itemprop="url" class="nav-link"  title="Admissions Consultants" href="https://poetsandquantsforundergrads.com/consultants/" onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Navigation Menu',
+  			'event_label': 'Admissions Consultants'
+		});
+	">Admissions Consultants</a></li>
+<li id="menu-item-16687" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16687"><a itemprop="url" class="nav-link"  title="Financing" href="https://poetsandquantsforundergrads.com/category/financing/" onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Navigation Menu',
+  			'event_label': 'Financing'
+		});
+	">Financing</a></li>
+<li id="menu-item-16688" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16688"><a itemprop="url" class="nav-link"  title="SAT" href="https://poetsandquantsforundergrads.com/category/sat/" onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Navigation Menu',
+  			'event_label': 'SAT'
+		});
+	">SAT</a></li>
+<li id="menu-item-16685" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16685"><a itemprop="url" class="nav-link"  title="Jobs" href="https://poetsandquantsforundergrads.com/category/first-jobs/" onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Navigation Menu',
+  			'event_label': 'Jobs'
+		});
+	">Jobs</a></li>
+</ul>						<div class="share-icons hidden-md hidden-lg hidden-xl">
+															<a class="social social-twitter" target="_blank" href="http://twitter.com/PoetsAndQuantsU" onclick="
+										gtag('event', 'click', {
+  											'event_category': 'Mobile Menu Social Account',
+  											'event_label': 'Twitter',
+										});
+									"  title="Poets&amp;Quants for Undergrads on Twitter"><i class="fab fa-x-twitter"></i></a>
+														<a class="social social-rss" target="_blank" href="https://poetsandquantsforundergrads.com/feed/" onclick="
+									gtag('event', 'click', {
+  										'event_category': 'Mobile Menu Social Account',
+  										'event_label': 'RSS',
+									});
+								"  title="Poets&amp;Quants for Undergrads on RSS Feed"><i class="fas fa-rss"></i></a>
+															<a class="social social-facebook" target="_blank" href="https://www.facebook.com/poetsandquantsforundergrads" onclick="
+										gtag('event', 'click', {
+  											'event_category': 'Mobile Menu Social Account',
+  											'event_label': 'Facebook',
+										});
+									"  title="Poets&amp;Quants for Undergrads on Facebook"><i class="fab fa-facebook-f"></i></a>
+																													<a class="social social-linkedin" target="_blank" href="http://www.linkedin.com/groups?gid=3149417&#038;trk=myg_ugrp_ovr" onclick="
+										gtag('event', 'click', {
+  											'event_category': 'Mobile Menu Social Account',
+  											'event_label': 'LinkedIn',
+										});
+									"  title="Poets&amp;Quants for Undergrads on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+																						<a class="social social-soundcloud last" target="_blank" href="https://soundcloud.com/poetsandquants" onclick="
+										gtag('event', 'click', {
+  											'event_category': 'Mobile Menu Social Account',
+  											'event_label': 'SoundCloud',
+										});
+									" title="Poets&amp;Quants for Undergrads on Soundcloud"><i class="fab fa-soundcloud"></i></a>
+							<div class="clearfix"></div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</nav>
+			</div>
+		</div><!-- moiving header -->
+		<nav id="mobile-nav" class="fix hidden-md hidden-lg">
+       		<ul itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" class="nav navbar-nav" id="menu-desktop-navigation-1"><li class="search"><form role="search" method="get" action="https://poetsandquantsforundergrads.com">
+						<div class="row">
+							<div class="col-xs-8 col-sm-8 search-term">
+								<div class="form-group">
+									<input placeholder="Search" type="text" class="form-control" name="s" id="s" value=""  />
+								</div>
+							</div>
+							<div class="col-xs-4 col-sm-4 search-button">
+								<div class="form-group">
+									<button type="submit" class="btn btn-pq text-uppercase">go</button>
+								</div>
+							</div>
+						</div></form></li><li class="first menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-16681"><a href="https://poetsandquantsforundergrads.com/" onclick="
+		gtag(&#039;event&#039;, &#039;click&#039;, {
+  			&#039;event_category&#039;: &#039;Navigation Menu&#039;,
+  			&#039;event_label&#039;: &#039;Home&#039;
+		});
+	">Home</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16682"><a href="https://poetsandquantsforundergrads.com/category/news/" onclick="
+		gtag(&#039;event&#039;, &#039;click&#039;, {
+  			&#039;event_category&#039;: &#039;Navigation Menu&#039;,
+  			&#039;event_label&#039;: &#039;News&#039;
+		});
+	">News</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16684"><a href="https://poetsandquantsforundergrads.com/category/rankings/" onclick="
+		gtag(&#039;event&#039;, &#039;click&#039;, {
+  			&#039;event_category&#039;: &#039;Navigation Menu&#039;,
+  			&#039;event_label&#039;: &#039;Rankings&#039;
+		});
+	">Rankings</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16691"><a target="_blank" rel="noopener" href="https://poetsandquantsforundergrads.com/school-profiles/" onclick="
+		gtag(&#039;event&#039;, &#039;click&#039;, {
+  			&#039;event_category&#039;: &#039;Navigation Menu&#039;,
+  			&#039;event_label&#039;: &#039;Schools&#039;
+		});
+	">Schools</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-16683"><a href="https://poetsandquantsforundergrads.com/category/students/" onclick="
+		gtag(&#039;event&#039;, &#039;click&#039;, {
+  			&#039;event_category&#039;: &#039;Navigation Menu&#039;,
+  			&#039;event_label&#039;: &#039;Students&#039;
+		});
+	">Students</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16686"><a target="_blank" rel="noopener" href="https://poetsandquantsforundergrads.com/category/admissions/" onclick="
+		gtag(&#039;event&#039;, &#039;click&#039;, {
+  			&#039;event_category&#039;: &#039;Navigation Menu&#039;,
+  			&#039;event_label&#039;: &#039;Admissions&#039;
+		});
+	">Admissions</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157910"><a href="https://poetsandquantsforundergrads.com/consultants/" onclick="
+		gtag(&#039;event&#039;, &#039;click&#039;, {
+  			&#039;event_category&#039;: &#039;Navigation Menu&#039;,
+  			&#039;event_label&#039;: &#039;Admissions Consultants&#039;
+		});
+	">Admissions Consultants</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16687"><a href="https://poetsandquantsforundergrads.com/category/financing/" onclick="
+		gtag(&#039;event&#039;, &#039;click&#039;, {
+  			&#039;event_category&#039;: &#039;Navigation Menu&#039;,
+  			&#039;event_label&#039;: &#039;Financing&#039;
+		});
+	">Financing</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16688"><a href="https://poetsandquantsforundergrads.com/category/sat/" onclick="
+		gtag(&#039;event&#039;, &#039;click&#039;, {
+  			&#039;event_category&#039;: &#039;Navigation Menu&#039;,
+  			&#039;event_label&#039;: &#039;SAT&#039;
+		});
+	">SAT</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16685"><a href="https://poetsandquantsforundergrads.com/category/first-jobs/" onclick="
+		gtag(&#039;event&#039;, &#039;click&#039;, {
+  			&#039;event_category&#039;: &#039;Navigation Menu&#039;,
+  			&#039;event_label&#039;: &#039;Jobs&#039;
+		});
+	">Jobs</a></li>
+</ul>		</nav>
+		<!-- END Navigation -->
+				<div id="main" class="row">
+
+	<div class="col-md-9 pq-main no-paddding-right">
+		<div class="col-md-12">
+			<!-- START Breadcrumbs --><nav aria-label="breadcrumb"><ol class="breadcrumb hidden-xs hidden-phone clearfix"><li class="breadcrumb-item"><a href="https://poetsandquantsforundergrads.com">Home</a></li><li class="breadcrumb-item"><a id="https://poetsandquantsforundergrads.com/category/students" href="https://poetsandquantsforundergrads.com/category/students">Students</a></li><li class="breadcrumb-item"><a href="https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/">2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)</a></li></ol></nav><!-- END Breadcrumbs -->
+<article id="post-7784" class="post-7784 post type-post status-publish format-standard has-post-thumbnail hentry category-students tag-benjamin-chang tag-best-brightest tag-business-major tag-business-school tag-carnegie-mellon-university tag-tepper-school-of-business tag-undergraduate">
+	<header class="entry-header">
+		<h1 class="entry-title">2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)</h1>	</header>
+	<div class="entry-meta">
+		<div>
+			<span class="glyphicon glyphicon-user"></span> by: <span class="vcard author"><span class="fn">Jeff Schmitt</span>
+			</span> on  April 09, 2017 | 
+			 				 <span class="glyphicon glyphicon-comment"></span>
+ 				<span class="comment-number"><a href="https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/#respond"><span class="dsq-postid" data-dsqidentifier="7784 https://poetsandquantsforundergrads.com/?p=7784">0 Comments</span></a></span>
+ 				 | 
+			 <span class="glyphicon glyphicon-eye-open"></span> <span class="stat">1,299 Views</span>
+					</div>
+        <span class="updated hidden">April 9, 2017</span>
+        <div class="entry-social-circle"><ul class="list-inline"><li class="list-inline-item dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-share"></i></a><ul class="dropdown-menu"><li class="copy-link"><i class="fas fa-clipboard"></i> <span>Copy Link</span></li><li><a onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Facebook',
+  			'event_label': 'Article Top Share',
+  			'value': 'https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/'
+		});
+	" href="https://facebook.com/sharer.php?uhttps%3A%2F%2Fpoetsandquantsforundergrads.com%2Fstudents%2F2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper%2F" target="_blank"><i class="fab fa-facebook-f"></i> Share on Facebook</a></li><li><a onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Twitter',
+  			'event_label': 'Article Top Share',
+  			'value': 'https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/'
+		});
+	" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpoetsandquantsforundergrads.com%2Fstudents%2F2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper%2F&text=2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)&via=PoetsAndQuants" target="_blank"><i class="fab fa-x-twitter" aria-hidden="true"></i> Share on Twitter</a></li><li><a onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Email',
+  			'event_label': 'Article Top Share',
+  			'value': 'https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/'
+		});
+	" href="mailto:?subject=2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)&body=https%3A%2F%2Fpoetsandquantsforundergrads.com%2Fstudents%2F2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper%2F"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a></li><li><a onclick="
+		gtag('event', 'click', {
+  			'event_category': 'LinkedIn',
+  			'event_label': 'Article Top Share',
+  			'value': 'https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/'
+		});
+	" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fpoetsandquantsforundergrads.com%2Fstudents%2F2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper%2F&title=2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)&summary=Dog lover with &quot;off-the-charts&quot; IQ headed to Deutsche Bank.&source=PoetsAndQuants" target="_blank"><i class="fab fa-linkedin-in"></i> Share on LinkedIn</a></li><li><a onclick="
+		gtag('event', 'click', {
+  			'event_category': 'WhatsApp',
+  			'event_label': 'Article Top Share',
+  			'value': 'https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/'
+		});
+	" href="whatsapp://send?text=2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)" data-action="share/whatsapp/share" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true"></i> Share on WhatsApp</a></li><li><a onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Reddit',
+  			'event_label': 'Article Top Share',
+  			'value': 'https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/'
+		});
+	" href="https://www.reddit.com/submit?url=https%3A%2F%2Fpoetsandquantsforundergrads.com%2Fstudents%2F2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper%2F" target="_blank"><i class="fab fa-reddit-alien" aria-hidden="true"></i> Share on Reddit</a></li></ul></li><li class="list-inline-item"><a onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Twitter',
+  			'event_label': 'Article Top Share',
+  			'value': 'https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/'
+		});
+	" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpoetsandquantsforundergrads.com%2Fstudents%2F2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper%2F&text=2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)&via=PoetsAndQuants" target="_blank"><i class="fab fa-x-twitter" aria-hidden="true"></i></a></li><li class="list-inline-item"><a onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Facebook',
+  			'event_label': 'Article Top Share',
+  			'value': 'https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/'
+		});
+	" href="https://facebook.com/sharer.php?uhttps%3A%2F%2Fpoetsandquantsforundergrads.com%2Fstudents%2F2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper%2F" target="_blank"><i class="fab fa-facebook-f"></i></a></li><li class="list-inline-item"><a onclick="
+		gtag('event', 'click', {
+  			'event_category': 'LinkedIn',
+  			'event_label': 'Article Top Share',
+  			'value': 'https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/'
+		});
+	" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fpoetsandquantsforundergrads.com%2Fstudents%2F2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper%2F&title=2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)&summary=Dog lover with &quot;off-the-charts&quot; IQ headed to Deutsche Bank.&source=PoetsAndQuants" target="_blank"><i class="fab fa-linkedin-in"></i></a></li><li class="list-inline-item"><a onclick="
+		gtag('event', 'click', {
+  			'event_category': 'Email',
+  			'event_label': 'Article Top Share',
+  			'value': 'https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/'
+		});
+	" href="mailto:?subject=2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)&body=https%3A%2F%2Fpoetsandquantsforundergrads.com%2Fstudents%2F2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper%2F"><i class="fa fa-envelope" aria-hidden="true"></i></a></li></ul></div><script type="rocketlazyloadscript">
+                jQuery(document).ready(function($){
+                    let temp = $("<input>");
+                    let url = $(location).attr("href");
+                    $(".copy-link").click(function() {
+                        $("body").append(temp);
+                        temp.val(url).select();
+                        document.execCommand("copy");
+                        temp.remove();
+                        $(".copy-link span").text("Link copied!");
+                    });
+                    // to reset the "copy link"
+                     $(".entry-social-circle .dropdown").hover(
+                         function() {
+                            $(".copy-link span").text("Copy Link");
+                        }, 
+                     );
+                    // to reset the "copy link" - touch
+                    $(".entry-social-circle .dropdown").on('hidden.bs.dropdown', function () {
+                          $(".copy-link span").text("Copy Link");
+                    });
+                });
+        </script>	</div>
+	<div class="entry-content clearfix">
+		<p><a href="https://poetsandquantsforundergrads.com/2017/04/07/best-brightest-business-majors-class-2017/benjamin-chang-carnegie-mellon-poetsandquantsundergrads-bbclassof2017/" rel="attachment wp-att-7905"><img fetchpriority="high" loading="lazy" decoding="async" width="648" height="432" itemprop="image" class=" wp-image-7905 img-responsive alignleft" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017.png" alt="" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017.png 648w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017-300x200.png 300w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017-90x60.png 90w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017-96x64.png 96w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017-375x250.png 375w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017-630x420.png 630w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2017/04/Benjamin-Chang-Carnegie-Mellon-PoetsAndQuantsUndergrads-BBClassof2017-180x120.png 180w" sizes="(max-width: 648px) 100vw, 648px" /></a></p>
+<h2><b>Benjamin Chang</b></h2>
+<h4><a href="https://poetsandquantsforundergrads.com/school-profile/carnegie-mellon-university-tepper-school-business/"><strong>Tepper School of Business at Carnegie Mellon University </strong></a></h4>
+<p><em>“The few things that I truly love: my family, my work, and animated movies.”</em></p>
+<p><strong>Fun fact about yourself:</strong> I started learning how to draw and play piano sophomore year of college. Better late than never!</p>
+<p><strong>Hometown:</strong> Beijing, China</p>
+<p><strong>High School:</strong> The International School of Beijing</p>
+<p><strong>Major:</strong> Finance</p>
+<p><strong>Double major:</strong> Computer Science</p>
+<p><strong>Favorite Business Courses:</strong> Derivative Securities, Finance, Corporate Finance, and Business, Society and Ethics</p>
+<p><strong>Extracurricular Activities, Community Work and Leadership Roles During College </strong>Tennis Club, Beta Gamma Sigma Inductee, Andrew Carnegie Society Scholar Inductee</p>
+<p><strong>Where have you interned during your college career?</strong></p>
+<ul>
+<li>Intralinks – Financial Planning and Analysis Intern in NYC</li>
+<li>Red Hat – Quality Engineering and Testing Automation in Beijing</li>
+<li>Deutsche Bank – Sales and Trading Summer Analyst in NYC (Securitized Products Trading and Equity Structuring)</li>
+</ul>
+<p><strong>Describe your dream Job</strong>: I want to be a CEO or founder of a financial firm (hedge fund, private equity), in which my decisions matter and I can make or lose a lot of money. Alternatively, heading structuring or trading desks at an investment bank would also be nice.</p>
+<p><strong>Who is your favorite professor? </strong>Professor Duane Seppi, my derivatives securities professor. Only a genius can make derivative securities interesting, exciting, and easy to comprehend – he certainly is one. I loved every second of that class and enjoyed his tests. The only complaint I have about that class is that we had too few lectures.</p>
+<p><strong>What did you enjoy most about majoring in a business-related field? </strong>Anything quantitative about finance – hedging, trading, discounted cash flows. The science behind finance is a beautiful one. Just thinking of the arguments made by Black and Scholes for options pricing or Miller and Mogdiliani for the effects of the structure of the firm sends shivers down my spine – these theories so elegantly and simply argued, yet they have such a profound impact on the finance industry.</p>
+<p><strong>Where would you like to work after graduation?  </strong>I&#8217;ve signed full-time with Deutsche Bank in NYC and will be returning there as a trader.</p>
+<p><strong>What are your long-term professional goals? </strong>I don&#8217;t want to get stuck in one position for too long. I hope to make MD of a trading desk in 10 years, or to move to a managing role of a PE firm or a hedge fund.</p>
+<p><strong>What advice would you give to a student looking to major in a business-related field? </strong>Take the major seriously. Take something quantitative.</p>
+<p><strong>“I knew I wanted to major in business when…”</strong>I attended my father&#8217;s award ceremony for outstanding sales performance when I was in the 6th grade.”</p>
+<p><strong>“If I didn’t major in business, I would be…</strong>studying computer science.”</p>
+<p><strong>“Before I entered business school, I wish I had known…</strong>how to program and what the difference was between investment banking and trading.”</p>
+<p><strong>What was the happiest moment of your life? </strong>Going to San Francisco with my family in the summer of 2002 to have a week&#8217;s worth of fun at Disney Land!</p>
+<p><strong>Which academic, extracurricular or personal achievement are you most proud of? </strong>Being inducted into Andrew Carnegie Society, hand-picked by the dean and awarded to the top 2% of entire senior class across the Carnegie Mellon campus.</p>
+<p><strong>What animal would you choose to represent your professional brand?</strong> Dog. Dogs are the best! Dog, dog, dog! There really isn&#8217;t a reason. I just love dogs.</p>
+<p><strong>Who would you most want to thank for your success? </strong>My father, mother, and brother. They have stood by me through thick-and-thin and have sacrificed so much for me. Everything I do, I do to make them proud.</p>
+<p><strong>What would you like your business school peers to say about you after you graduate from this program? </strong>Take the major seriously. Go to class. Get good grades.</p>
+<p><strong>Favorite book:</strong> <em>Atlas Shrugged</em></p>
+<p><strong>Favorite movie:</strong> <em>Laputa: Castle in the Sky</em></p>
+<p><strong>Favorite musical performer:</strong> Elvis Presley</p>
+<p><strong>Favorite vacation spot:</strong> Anywhere with beaches and clear skies&#8230; maybe Hawaii.</p>
+<p><strong>What are your hobbies?</strong> Tennis, drawing, singing, &#8220;pianoing&#8221;</p>
+<p><strong>What made Benjamin such an invaluable addition to the Class of 2017?</strong></p>
+<p>“Ben Chang’s enthusiasm for learning is palpable and infectious; whether he and a group of students are vigorously debating a programming assignment in a killer Computer Science class, or he is having a long phone call over the weekend with a professor about Monte Carlo Simulation for a financial derivatives valuation case project. Having students like Ben around is what makes being on Carnegie Mellon’s campus exciting and great. Off-the-charts IQ, an appreciation for the power of knowledge, and a capacity for hard work are a combination that makes the extraordinary possible.”</p>
+<p><strong>Duane Seppi</strong><br />
+<strong>BNY Mellon Professor of Finance, </strong><br />
+<strong>Head of the M.S. in Computational Finance Program, </strong><br />
+<strong>Tepper School of Business at Carnegie Mellon University</strong></p>
+<p><b>DON&#8217;T MISS: </b><a href="https://poetsandquantsforundergrads.com/2017/04/07/best-brightest-business-majors-class-2017/"><b>THE FULL HONOR ROLL: THE BEST &amp; BRIGHTEST UNDERGRADUATE BUSINESS MAJORS OF 2017</b></a></p>
+		
+					<div class="clearfix"></div>
+			
+			<div class="clearfix"></div>			<div class="clearfix"></div>
+			
+				
+		<div class="entry-comments">
+						<p><em>Questions about this article? <a href="mailto:&#074;eff&#064;po&#101;&#116;s&#097;&#110;&#100;&#113;u&#097;n&#116;&#115;.com">Email us</a> or leave a comment below.</a></em></p>
+							
+				<div id="disqus_thread"></div>
+				<script type="rocketlazyloadscript">
+   					var disqus_config = function () {
+    					this.page.url = 'https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/';  
+    					this.page.identifier = '7784 https://poetsandquantsforundergrads.com/?p=7784';
+    				};
+   					(function() {
+    					var d = document, s = d.createElement('script');
+    					s.src = 'https://poetsandquants.disqus.com/embed.js';
+    					s.setAttribute('data-timestamp', +new Date());
+    					(d.head || d.body).appendChild(s);
+    				})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+					</div>
+		
+	</div>
+
+	<footer class="entry-footer">
+		<div id="highlighted"><div class="widget-title">Trending</div><div class="row"><div class="highlight col-md-3 col-sm-12" id="highlight-1"><a href="https://poetsandquantsforundergrads.com/news/best-undergraduate-business-schools-of-2024/" rel="bookmark" title="Permanent Link to Poets&#038;Quants&#8217; Best Undergraduate Business Schools Of 2024"><img width="460" height="240" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2024/01/2024-ugrad-coverimage-460x240.jpg" class="img-responsive img-fluid wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2024/01/2024-ugrad-coverimage-460x240.jpg 460w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2024/01/2024-ugrad-coverimage-210x111.jpg 210w" sizes="(max-width: 460px) 100vw, 460px" /></a><h4><a href="https://poetsandquantsforundergrads.com/news/best-undergraduate-business-schools-of-2024/" rel="bookmark" title="Permanent Link to Poets&#038;Quants&#8217; Best Undergraduate Business Schools Of 2024">Poets&#038;Quants&#8217; Best Undergraduate Business Schools Of 2024</a></h3></div><div class="highlight col-md-3 col-sm-12" id="highlight-2"><a href="https://poetsandquantsforundergrads.com/news/the-most-least-educated-states-in-america/" rel="bookmark" title="Permanent Link to The Most &#038; Least Educated States In America"><img width="460" height="240" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2021/09/map-of-U.S.-460x240.jpg" class="img-responsive img-fluid wp-post-image" alt="Cities with the most student debt" decoding="async" loading="lazy" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2021/09/map-of-U.S.-460x240.jpg 460w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2021/09/map-of-U.S.-210x111.jpg 210w" sizes="(max-width: 460px) 100vw, 460px" /></a><h4><a href="https://poetsandquantsforundergrads.com/news/the-most-least-educated-states-in-america/" rel="bookmark" title="Permanent Link to The Most &#038; Least Educated States In America">The Most &#038; Least Educated States In America</a></h3></div><div class="highlight col-md-3 col-sm-12" id="highlight-3"><a href="https://poetsandquantsforundergrads.com/news/ranking-u-s-news-best-undergraduate-business-programs-of-2024/" rel="bookmark" title="Permanent Link to Ranking: U.S. News&#8217; Best Undergraduate Business Programs Of 2024"><img width="460" height="240" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2023/03/haas-undergrad-2-460x240.jpg" class="img-responsive img-fluid wp-post-image" alt="2023’s Undergraduate Business Schools To Watch" decoding="async" loading="lazy" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2023/03/haas-undergrad-2-460x240.jpg 460w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2023/03/haas-undergrad-2-210x111.jpg 210w" sizes="(max-width: 460px) 100vw, 460px" /></a><h4><a href="https://poetsandquantsforundergrads.com/news/ranking-u-s-news-best-undergraduate-business-programs-of-2024/" rel="bookmark" title="Permanent Link to Ranking: U.S. News&#8217; Best Undergraduate Business Programs Of 2024">Ranking: U.S. News&#8217; Best Undergraduate Business Programs Of 2024</a></h3></div><div class="highlight col-md-3 col-sm-12" id="highlight-4"><a href="https://poetsandquantsforundergrads.com/news/ranking-wall-street-journals-2024-best-colleges-in-america/" rel="bookmark" title="Permanent Link to Ranking: Wall Street Journal’s 2024 Best Colleges In America"><img width="460" height="240" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2023/09/Princeton-University-460x240.jpg" class="img-responsive img-fluid wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2023/09/Princeton-University-460x240.jpg 460w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2023/09/Princeton-University-210x111.jpg 210w" sizes="(max-width: 460px) 100vw, 460px" /></a><h4><a href="https://poetsandquantsforundergrads.com/news/ranking-wall-street-journals-2024-best-colleges-in-america/" rel="bookmark" title="Permanent Link to Ranking: Wall Street Journal’s 2024 Best Colleges In America">Ranking: Wall Street Journal’s 2024 Best Colleges In America</a></h3></div></div><div class="clearfix"></div></div>		
+		<div class="entry-tags">
+			<div itemprop="keywords"><span class="glyphicon glyphicon-tags"></span> Tagged: <a href="https://poetsandquantsforundergrads.com/tag/benjamin-chang/" rel="tag">Benjamin Chang</a>, <a href="https://poetsandquantsforundergrads.com/tag/best-brightest/" rel="tag">Best &amp; Brightest</a>, <a href="https://poetsandquantsforundergrads.com/tag/business-major/" rel="tag">business major</a>, <a href="https://poetsandquantsforundergrads.com/tag/business-school/" rel="tag">business school</a>, <a href="https://poetsandquantsforundergrads.com/tag/carnegie-mellon-university/" rel="tag">Carnegie Mellon University</a>, <a href="https://poetsandquantsforundergrads.com/tag/tepper-school-of-business/" rel="tag">Tepper School of Business</a>, <a href="https://poetsandquantsforundergrads.com/tag/undergraduate/" rel="tag">undergraduate</a></div>
+		</div>
+	
+	</footer>
+</article>
+
+
+
+		
+<script type="rocketlazyloadscript">
+	jQuery(document).ready(function ($) {
+		$( '#continued-reading' ).hide();
+		$( '#continue-reading' ).click(function() {
+			$( '#continued-reading' ).fadeToggle( 'slow', 'linear' );
+			$( '#continue-reading' ).hide();
+		});
+		$('.wp-pagenavi a.page').attr('href', function() {
+			return this.href + '';
+		});
+		$('.page-navigation a.post-page-numbers').attr('href', function() {
+			return this.href + '';
+		});
+		if ( $('.page-navigation a').length == 1 ) {
+			$(".page-navigation").css("display", "flex");
+			$(".page-navigation").css("justify-content", "center");
+		} else {
+			$(".page-navigation").removeAttr('style');
+        }
+	});
+</script>
+
+<div class="clearfix next-prev">
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://poetsandquantsforundergrads.com/students/2017-best-brightest-allana-nelson-babson-college/" rel="prev"><span>Previous Article: </span>2017 Best &amp; Brightest: Allana A. Nelson, Babson College</a></div><div class="nav-next"><a href="https://poetsandquantsforundergrads.com/students/2017-best-brightest-angad-singh-padda-u-c-berkeley-haas/" rel="next"><span>Next Article: </span>2017 Best &amp; Brightest: Angad Singh Padda, U.C. Berkeley (Haas) </a></div></div>
+	</nav></div>		</div>
+	</div>
+	
+	
+	
+	<div id="general-sidebar" role="complementary" class="sidebar col-md-3 pq-main no-padding-left">	
+		<div class="col-md-12 no-padding-left">	
+			<ul>
+				<li id="pq_join_widget-6" class="widget widget_pq_join_widget">			<div class="is-not-logged-in row" style="display: none;">
+				<a class="login-button col-md-9 col-sm-9 col-xs-9" href="/register/?pq-reg-loc=sidebar" title="Stay Informed. Sign Up!">Stay Informed. Sign Up!</a>
+				<a class="login-button col-md-3 col-sm-3 col-xs-3" href="/member-check/?redirect=https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/" title="Login">Login</a>
+			</div>
+				
+			<div class="is-logged-in row" style="display: none;">
+				<a class="side-logged-in col-md-12 col-sm-12 col-xs-12 login-button" href="#" title="Logout">Logout</a>
+			</div>
+		
+			<div class="clearfix"></div>
+			
+			<div id="social-icons-side">
+				<div class="text-center">
+											<a class="social social-twitter" target="_blank" href="http://twitter.com/PoetsAndQuantsU" onclick="
+								gtag('event', 'click', {
+  									'event_category': 'Sidebar Social Account',
+  									'event_label': 'Twitter',
+								});
+							" title="Poets&amp;Quants for Undergrads on Twitter"><i class="fab fa-x-twitter"></i></a>
+										<a class="social social-rss" target="_blank" href="https://poetsandquantsforundergrads.com/feed/" onclick="
+							gtag('event', 'click', {
+  								'event_category': 'Sidebar Social Account',
+  								'event_label': 'RSS',
+							});
+						" title="Poets&amp;Quants for Undergrads on RSS Feed"><i class="fas fa-rss"></i></a>
+											<a class="social social-facebook" target="_blank" href="https://www.facebook.com/poetsandquantsforundergrads" onclick="
+								gtag('event', 'click', {
+  									'event_category': 'Sidebar Social Account',
+  									'event_label': 'Facebook',
+								});
+							" title="Poets&amp;Quants for Undergrads on Facebook"><i class="fab fa-facebook-f"></i></a>
+										
+					<a class="social social-instagram" target="_blank" href="https://www.instagram.com/poetsandquants/?hl=en" onclick="gtag('event', 'click', {'event_category': 'Sidebar Social Account','event_label': 'Instagram',});" title="Poets&amp;Quants on Facebook"><i class="fab fa-instagram"></i></a>
+
+					
+																<a class="social social-linkedin" target="_blank" href="http://www.linkedin.com/groups?gid=3149417&#038;trk=myg_ugrp_ovr" onclick="
+								gtag('event', 'click', {
+  									'event_category': 'Sidebar Social Account',
+  									'event_label': 'LinkedIn',
+								});
+							" title="Poets&amp;Quants for Undergrads on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+																<a class="social social-soundcloud last" target="_blank" href="https://soundcloud.com/poetsandquants" onclick="
+								gtag('event', 'click', {
+  									'event_category': 'Sidebar Social Account',
+  									'event_label': 'SoundCloud',
+								});
+							" title="Poets&amp;Quants for Undergrads on Soundcloud"><i class="fab fa-soundcloud"></i></a>
+									</div>
+				<div class="clearfix"></div>
+			</div>
+			
+			<div class="clearfix"></div>
+			
+			<div id="side-search">
+				<form role="search" method="get" id="search-form" class="form-inline search-form" action="https://poetsandquantsforundergrads.com/">
+	<div class="form-group">
+      	<span class="screen-reader-text">Search for:</span>
+      	<input type="search" class="form-control" value="" name="s" placeholder="Search" />
+   	</div>
+	<button type="submit"><span class="glyphicon glyphicon-search"></span></button>
+</form>
+			</div>
+
+	</li><li id="pq_ads_widget-6" class="widget widget_pq_ads_widget">	
+		<div id="div-gpt-ad-1489169796612-0" style='min-height:250px; min-width:300px;'>
+			<script type="rocketlazyloadscript">
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1489169796612-0'); });
+			</script>
+		</div>
+		
+		
+			
+	</li><li id="pq_ads_widget-12" class="widget widget_pq_ads_widget">	
+		<div id="div-gpt-ad-1584362366323-0" style='min-height:600px; min-width:300px;'>
+			<script type="rocketlazyloadscript">
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1584362366323-0'); });
+			</script>
+		</div>
+		
+		
+			
+	</li><li id="pq_sponsored_blogs_widget-3" class="widget widget_pq_sponsored_blogs_widget"><div class="widget-title">Campus Correspondents</div>		
+		<div class="sponsored-posts">
+							<div class="media">
+										<div class="media-left">
+						<img width="64" height="64" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/05/Graduation-Pic-64x64.jpeg" class="media-object wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/05/Graduation-Pic-64x64.jpeg 64w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/05/Graduation-Pic-150x150.jpeg 150w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/05/Graduation-Pic-128x128.jpeg 128w" sizes="(max-width: 64px) 100vw, 64px" />					</div>
+										<div class="media-body">
+						<h4 class="media-heading"><a href="https://poetsandquantsforundergrads.com/students/graduating-wharton-to-the-real-world/" rel="bookmark">Wharton Correspondent: Bitter Sweet Feelings at Graduation Time</a></h4>						<div class="widget-post-info">
+							<span class="widget-post-author">by Campus Correspondent, Justine Murray (Wharton)</span>
+							<span class="widget-post-elapsed"> (6 years ago)</span>
+						</div>
+					</div>
+				</div>
+							<div class="media">
+										<div class="media-left">
+						<img width="64" height="64" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/05/MarniWiden_OlinGraduation1-64x64.jpg" class="media-object wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/05/MarniWiden_OlinGraduation1-64x64.jpg 64w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/05/MarniWiden_OlinGraduation1-150x150.jpg 150w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/05/MarniWiden_OlinGraduation1-128x128.jpg 128w" sizes="(max-width: 64px) 100vw, 64px" />					</div>
+										<div class="media-body">
+						<h4 class="media-heading"><a href="https://poetsandquantsforundergrads.com/students/graduation-day-at-olin-business-school/" rel="bookmark">Olin Correspondent: Officially a WashU Alum</a></h4>						<div class="widget-post-info">
+							<span class="widget-post-author">by Campus Correspondent, Marni Widen (Olin)</span>
+							<span class="widget-post-elapsed"> (6 years ago)</span>
+						</div>
+					</div>
+				</div>
+							<div class="media">
+										<div class="media-left">
+						<img width="64" height="64" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/04/Marni-Widen_Olin-64x64.jpg" class="media-object wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/04/Marni-Widen_Olin-64x64.jpg 64w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/04/Marni-Widen_Olin-150x150.jpg 150w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/04/Marni-Widen_Olin-128x128.jpg 128w" sizes="(max-width: 64px) 100vw, 64px" />					</div>
+										<div class="media-body">
+						<h4 class="media-heading"><a href="https://poetsandquantsforundergrads.com/students/lessons-learned-in-business-school/" rel="bookmark">Olin Correspondent: How Olin Helps You In The Real World</a></h4>						<div class="widget-post-info">
+							<span class="widget-post-author">by Campus Correspondent, Marni Widen (Olin)</span>
+							<span class="widget-post-elapsed"> (6 years ago)</span>
+						</div>
+					</div>
+				</div>
+							<div class="media">
+										<div class="media-left">
+						<img width="64" height="64" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/04/Johanne-Vincent_Ross-64x64.jpg" class="media-object wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/04/Johanne-Vincent_Ross-64x64.jpg 64w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/04/Johanne-Vincent_Ross-150x150.jpg 150w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/04/Johanne-Vincent_Ross-128x128.jpg 128w" sizes="(max-width: 64px) 100vw, 64px" />					</div>
+										<div class="media-body">
+						<h4 class="media-heading"><a href="https://poetsandquantsforundergrads.com/students/ways-to-finance-your-undergrad-degree/" rel="bookmark">Ross Correspondent: Financing Your Undergraduate Biz Degree</a></h4>						<div class="widget-post-info">
+							<span class="widget-post-author">by Campus Correspondent, Johanne Vincent (Ross)</span>
+							<span class="widget-post-elapsed"> (6 years ago)</span>
+						</div>
+					</div>
+				</div>
+							<div class="media last">
+										<div class="media-left">
+						<img width="64" height="64" src="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/03/Tanner-Snider-64x64.jpg" class="media-object wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/03/Tanner-Snider-64x64.jpg 64w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/03/Tanner-Snider-150x150.jpg 150w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/03/Tanner-Snider-296x300.jpg 296w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/03/Tanner-Snider-59x60.jpg 59w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/03/Tanner-Snider-246x250.jpg 246w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/03/Tanner-Snider-128x128.jpg 128w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/03/Tanner-Snider-118x120.jpg 118w, https://poetsandquantsforundergrads.com/wp-content/uploads/sites/3/2018/03/Tanner-Snider.jpg 405w" sizes="(max-width: 64px) 100vw, 64px" />					</div>
+										<div class="media-body">
+						<h4 class="media-heading"><a href="https://poetsandquantsforundergrads.com/students/kelley-correspondent-kelleys-most-innovative-and-challenging-classes/" rel="bookmark">Kelley Correspondent: Kelley&#8217;s Most Innovative (And Challenging) Classes</a></h4>						<div class="widget-post-info">
+							<span class="widget-post-author">by Campus Correspondent, Tanner Snider (Kelley)</span>
+							<span class="widget-post-elapsed"> (6 years ago)</span>
+						</div>
+					</div>
+				</div>
+					</div>		
+	</li><li id="pq_drill_down_widget-3" class="widget widget_pq_drill_down_widget"><div class="widget-title">Drill Down</div>		<div id="most-viewed">
+			<ul class='wppp_list'>
+				<li class="article"><a href="https://poetsandquantsforundergrads.com/news/best-undergraduate-business-schools-of-2024/">Poets&#038;Quants&#8217; Best Undergraduate Business Schools Of 2024 (2,167 views)</a></li><li class="article"><a href="https://poetsandquantsforundergrads.com/news/the-most-least-educated-states-in-america/">The Most &#038; Least Educated States In America (1,839 views)</a></li><li class="article"><a href="https://poetsandquantsforundergrads.com/news/ranking-u-s-news-best-undergraduate-business-programs-of-2024/">Ranking: U.S. News&#8217; Best Undergraduate Business Programs Of 2024 (1,577 views)</a></li><li class="article"><a href="https://poetsandquantsforundergrads.com/news/ranking-wall-street-journals-2024-best-colleges-in-america/">Ranking: Wall Street Journal’s 2024 Best Colleges In America (1,219 views)</a></li><li class="article"><a href="https://poetsandquantsforundergrads.com/news/the-top-25-highest-paying-internships/">The Top 25 Highest-Paying Internships (1,055 views)</a></li>    		</ul>
+		</div>
+	</li><li id="pq_ads_widget-7" class="widget widget_pq_ads_widget">	
+		<div id="div-gpt-ad-1489169796612-4" style='min-height:250px; min-width:300px;'>
+			<script type="rocketlazyloadscript">
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1489169796612-4'); });
+			</script>
+		</div>
+		
+		
+			
+	</li><li id="pq_air_time_widget-3" class="widget widget_pq_air_time_widget"><div class="widget-title">The Biz Buzz <span>Most Recent Comments</span></div>		
+		<div id="air-times">
+						<div class="media">
+				<div class="media-left">
+					<img src="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/icon-poets.jpg" alt="Poets" height="64" width="64" />				</div>
+				<div class="media-body">
+					<h4 class="media-heading">Submitted By: <a href="https://poetsandquantsforundergrads.com/news/25-colleges-with-the-most-active-tiktok-users/#dsq-content">George</a></h4>
+					<div class="comment-date">May 26, 2024 | <a href="https://poetsandquantsforundergrads.com/news/25-colleges-with-the-most-active-tiktok-users/">Read Article</a></div>
+					<p>This would be an interesting to replicate for other platforms ...</p>
+				</div>	
+			</div>
+			
+						<div class="media">
+				<div class="media-left">
+					<img src="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/icon-poets.jpg" alt="Poets" height="64" width="64" />				</div>
+				<div class="media-body">
+					<h4 class="media-heading">Submitted By: <a href="https://poetsandquantsforundergrads.com/admissions/pqs-2024-undergrad-ranking-the-data-dump/#dsq-content">Keith Davidson</a></h4>
+					<div class="comment-date">May 3, 2024 | <a href="https://poetsandquantsforundergrads.com/admissions/pqs-2024-undergrad-ranking-the-data-dump/">Read Article</a></div>
+					<p>Where is Penn state, University of Texas Austin,  Boston ...</p>
+				</div>	
+			</div>
+			
+						<div class="media">
+				<div class="media-left">
+					<img src="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/icon-poets.jpg" alt="Poets" height="64" width="64" />				</div>
+				<div class="media-body">
+					<h4 class="media-heading">Submitted By: <a href="https://poetsandquantsforundergrads.com/news/best-undergraduate-business-schools-of-2024/#dsq-content">Brennan</a></h4>
+					<div class="comment-date">Apr 26, 2024 | <a href="https://poetsandquantsforundergrads.com/news/best-undergraduate-business-schools-of-2024/">Read Article</a></div>
+					<p>Where is the University of Texas, Florida State, and University ...</p>
+				</div>	
+			</div>
+			
+						<div class="media">
+				<div class="media-left">
+					<img src="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/icon-poets.jpg" alt="Poets" height="64" width="64" />				</div>
+				<div class="media-body">
+					<h4 class="media-heading">Submitted By: <a href="https://poetsandquantsforundergrads.com/news/an-explosion-in-demand-for-kelleys-undergrad-business-program/#dsq-content">Ingrid Segovia</a></h4>
+					<div class="comment-date">Apr 22, 2024 | <a href="https://poetsandquantsforundergrads.com/news/an-explosion-in-demand-for-kelleys-undergrad-business-program/">Read Article</a></div>
+					<p>This is due to Bidenomics more than anything. The middle ...</p>
+				</div>	
+			</div>
+			
+						<div class="media">
+				<div class="media-left">
+					<img src="https://poetsandquantsforundergrads.com/wp-content/themes/pqu/images/icon-poets.jpg" alt="Poets" height="64" width="64" />				</div>
+				<div class="media-body">
+					<h4 class="media-heading">Submitted By: <a href="https://www.aust.edu.lb">Aust SEO</a></h4>
+					<div class="comment-date">Apr 16, 2024 | <a href="https://poetsandquantsforundergrads.com/news/the-highest-paying-business-majors/">Read Article</a></div>
+					<p>This insightful article sheds light on the highest-paying business majors ...</p>
+				</div>	
+			</div>
+			
+					</div>	
+	</li><li id="pq_ads_widget-8" class="widget widget_pq_ads_widget">	
+		<div id="div-gpt-ad-1489169796612-1" style='min-height:250px; min-width:300px;'>
+			<script type="rocketlazyloadscript">
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1489169796612-1'); });
+			</script>
+		</div>
+		
+		
+			
+	</li>			</ul>	
+		</div>	
+	</div><!-- /.col-md-4 -->
+
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-37657426-3']);
+_gaq.push(['_setCustomVar', 1, 'Category', 'Students']);
+_gaq.push(['_setCustomVar', 2, 'Author', 'Jeff Schmitt']);
+_gaq.push(['_setCustomVar', 3, 'Context', 'post']);
+_gaq.push(['_setCustomVar', 4, 'Tags', 'Benjamin Chang, Best &amp; Brightest, business major, business school, Carnegie Mellon University, Tepper School of Business, undergraduate']);
+_gaq.push(['_setCustomVar', 5, 'Logged In', 'false']);
+_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+				
+
+			<div class="clearfix"></div>
+						<div id="partners">	
+				<p>Our Partner Sites:  <a href="https://poetsandquants.com" title="Poets&amp;Quants" target="_blank">Poets&amp;Quants</a> |<a href="https://poetsandquantsforexecs.com" title="Poets&amp;Quants" target="_blank">Poets&amp;Quants for Execs</a> | <a href="https://tippingthescales.com" title="Tipping the Scales" target="_blank">Tipping the Scales</a> | <a href="https://weseegenius.com" title="We See Genius" target="_blank">We See Genius</a></p>
+			</div>	
+						<footer id="site-bottom">
+				<p class="text-center" id="footer-links"><a href="https://poetsandquantsforundergrads.com/about/" title="About">About Poets&amp;Quants</a> | <a href="https://poetsandquantsforundergrads.com/archives/" title="P&amp;Q News Archives">P&amp;Q News Archives</a> | <a href="https://poetsandquantsforundergrads.com/privacy-policy/" title="Privacy Policy"> Privacy Policy</a> | <a href="https://poetsandquantsforundergrads.com/advertising/" title="Advertising & Partnerships">Advertising & Partnerships</a> | <a href="https://poetsandquantsforundergrads.com/editorial/" title="Editorial">Editorial</a> | <a href="https://poetsandquantsforundergrads.com/contact-us/" title="Contact Us">Contact Us</a> |   <a href="/register/" title="Sign In">Sign In / Register</a></p>
+				<p class="text-center" id="copyright">Copyright 2024 Poets&amp;Quants, Inc. All Rights Reserved.</p>
+				<p class="text-center" id="designer">Website Design By: <a href="https://yellowfarmstudios.com">Yellowfarmstudios.com</a></p>
+			</footer>
+		</div>
+	</div><!-- /.container -->
+
+
+		<div class="modal fade" id="modal-ad" tabindex="-1" role="dialog" aria-labelledby="modal-ad-label">
+ 			<div class="modal-dialog" role="document">
+    			<div class="modal-content">
+      				<div class="modal-body">
+      					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        				<div class="roadblock-ad" id="div-gpt-ad-1552588455487-0">
+							<script type="rocketlazyloadscript">
+								googletag.cmd.push(function() { googletag.display("div-gpt-ad-1552588455487-0"); });
+							</script>
+						</div>
+					</div>
+      			</div>
+    		</div>
+  		</div>
+	
+			<!-- Start of HubSpot Embed Code -->
+			<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="hs-script-loader" async defer data-rocket-src="//js.hs-scripts.com/4666040.js"></script>
+			<!-- End of HubSpot Embed Code -->
+		
+	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+			(function() {
+				var css = document.createElement('link');
+				css.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css';
+				css.rel = 'stylesheet';
+				css.type = 'text/css';
+				document.getElementsByTagName('head')[0].appendChild(css);
+			})();
+	</script>
+	<script type="rocketlazyloadscript">jQuery(document).ready(function($){var show_blur_after = 3
+   					if ( cookie.get( 'pq_cornerstone_page_view_override_val') ) {
+   						var cornerstone_override = parseInt( cookie.get( 'pq_cornerstone_page_view_override_val' ), 10 );
+   						if ( !isNaN(cornerstone_override) ) {
+						 	show_blur_after = parseInt(cornerstone_override, 10 );
+						} else {
+							var show_blur_after = parseInt(show_blur_after, 10 );
+						}
+					} else {
+						var show_blur_after = parseInt(show_blur_after, 10 );
+					}
+					
+   					var cookieName = 'pq_pageview_js_count';
+					if ( !cookie.get( 'pq_popup_registered' ) && !cookie.get( 'is_pq_user' ) && document.cookie.indexOf('wp-settings') === -1 ) {
+						//if ( !cookie.get( 'pq_popup_registered' ) && !cookie.get( 'pq_paywall' != false ) ) {
+						var val = parseInt( cookie.get( cookieName ), 10 );
+						if ( isNaN(val) ) {
+							val = 0;
+						}
+					val += 1;	
+						if ( val >= show_blur_after ) {
+							//$('#pq-register-modal').modal('show');
+							if ( !$('body').hasClass('pq-free') ){
+								$('.post .entry-content p:not(.wp-caption-text):eq(3)').nextAll().addClass('blur');
+								var url = window.location.href;
+								$('.post .entry-content p:not(.wp-caption-text):eq(3)' ).after('<div class="clearfix"></div><div class="keep-reading-btns text-center"><span>Continue reading P&Q\'s premium content for free!</span> <a class="btn-xs btn-white btn-pq" href="/member-check?redirect=' + url + '">Login</a> <span>or</span> <a href="/register?redirect=' + url + '&pq-reg-loc=wall" class="btn-xs btn-white btn-pq">Register</a></div></div>');
+							}
+							// Set it higher so it will continue to blur
+							val = (show_blur_after +1);
+						}
+						
+						cookie.remove( cookieName );
+			
+						cookie.set( cookieName, val, {
+							expires: 999, // Expires in 999 days
+							path: '/',
+						});
+					} else {
+						// Updated Sept 27
+						$('.post .entry-content p:eq(3)').nextAll().removeClass('blur');
+						$('.post .entry-content .keep-reading-btns').remove();
+					}
+		   		});
+			</script>
+			<!-- START: 76631242 pixels, are aggregated in consenTag container -->
+			<script type="rocketlazyloadscript" data-rocket-src="https://consentag.eu/public/3.0.1/consenTag.js"></script>
+			<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+				consenTag.init({
+					containerId: "76631217",
+					silentMode: true
+				}, true);
+			</script>
+			<!-- END: 76631242 pixels, are aggregated in consenTag container -->
+			<script type="application/ld+json">
+	{
+	 "@context": "https://schema.org",
+	 "@type": "BreadcrumbList",
+	 "itemListElement":
+	 [	  {
+	   "@type": "ListItem",
+	   "position": 1,
+	   "item":
+	   {
+	    "@id": "https://weseegenius.com/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper",
+	    "name": "Poets&amp;Quants for Undergrads"
+	    }
+	  },
+	  {
+	  "@type": "ListItem",
+	  "position": 2,
+	  "item":
+	   {
+	     "@id": "https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/",
+	     "name": "2018 Best &amp; Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)"
+	   }
+	  }
+	
+	 ]
+	}
+	</script>
+	<script type="text/javascript" src="https://poetsandquantsforundergrads.com/wp-includes/js/comment-reply.min.js" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" id="disqus_count-js-extra">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"poetsandquantsforundergrads"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://poetsandquantsforundergrads.com/wp-content/plugins/disqus-comment-system/public/js/comment_count.js" id="disqus_count-js"></script>
+<script type="text/javascript" id="disqus_embed-js-extra">
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"integration":"wordpress 3.1.1"},"disqusIdentifier":"7784 https:\/\/poetsandquantsforundergrads.com\/?p=7784","disqusShortname":"poetsandquantsforundergrads","disqusTitle":"2018 Best & Brightest: Benjamin Chang, Carnegie Mellon University (Tepper)","disqusUrl":"https:\/\/poetsandquantsforundergrads.com\/students\/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper\/","postId":"7784"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://poetsandquantsforundergrads.com/wp-content/plugins/disqus-comment-system/public/js/comment_embed.js" id="disqus_embed-js"></script>
+<script type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/poetsandquantsforundergrads.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/js/bootstrap/js/bootstrap.min.js" id="bootstrap-js-js"></script>
+<script type="rocketlazyloadscript">(function(d){var s=d.createElement("script");s.type="text/javascript";s.src="https://a.omappapi.com/app/js/api.min.js";s.async=true;s.id="omapi-script";d.getElementsByTagName("head")[0].appendChild(s);})(document);</script><script type="text/javascript" src="https://stats.wp.com/e-202424.js" id="jetpack-stats-js" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="jetpack-stats-js-after">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"69401546\",\"post\":\"7784\",\"tz\":\"-4\",\"srv\":\"poetsandquantsforundergrads.com\",\"j\":\"1:13.5\"}") ]);
+_stq.push([ "clickTrackerInit", "69401546", "7784" ]);
+/* ]]> */
+</script>
+		<script type="rocketlazyloadscript" data-rocket-type="text/javascript">var omapi_data = {"object_id":7784,"object_key":"post","object_type":"post","term_ids":[12,431,447,661,671,765,3332,3537],"wp_json":"https:\/\/poetsandquantsforundergrads.com\/wp-json","wc_active":false,"edd_active":false,"nonce":"227303f273"};</script>
+		<script>"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><noscript><link rel='stylesheet' id='mediaelement-css' href='https://poetsandquantsforundergrads.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css' type='text/css' media='all' /><link rel='stylesheet' id='wp-mediaelement-css' href='https://poetsandquantsforundergrads.com/wp-includes/js/mediaelement/wp-mediaelement.min.css' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='bootstrap-css' href='https://poetsandquantsforundergrads.com/wp-content/cache/min/3/wp-content/themes/pq-resp/js/bootstrap/css/bootstrap.min.css?ver=1714022137' type='text/css' media='all' /><link rel='stylesheet' id='bootstrap-theme-css' href='https://poetsandquantsforundergrads.com/wp-content/themes/pq-resp/js/bootstrap/css/bootstrap-theme.min.css' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='pq-resps-css' href='https://poetsandquantsforundergrads.com/wp-content/cache/min/3/wp-content/themes/pq-resp/style.css?ver=1714022137' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='pqu-child-css' href='https://poetsandquantsforundergrads.com/wp-content/cache/min/3/wp-content/themes/pqu/style.css?ver=1714022137' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='mmenu-css' href='https://poetsandquantsforundergrads.com/wp-content/cache/min/3/wp-content/themes/pq-resp/style-mmenu.css?ver=1714022137' type='text/css' media='all' /></noscript></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
