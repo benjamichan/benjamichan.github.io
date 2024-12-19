@@ -57,6 +57,14 @@
           <h2 id="financeprojects">Finance Related Personal Projects</h2>
           <p> Personal projects related to finance that I am interested in.</p>
           <h3 id="valueinvesting">Value Investing Feature Analysis</h3><span class="year">2024 - </span>
+          <h4>Dec 2024 Update</h4>
+          <p>Purchased SHARDAR SF1 Database Core Fundamentals Data (cleaned) from NASDAQ.  After processing, used Bruce Greenwald and Greenblatt calculations in bulk to generate company data per quarter (mix TTM and most recent).  Used Random Forest Classifer to try to predict if top percentile for future 10YR CAGR total return accross different depths and parameters.  F1 Scores are heading in the write direction (well above 0.5) and use SHAP values to measure best features for outperformance.  To do: understand why certain values may be important.  Continue to tune params to find best classifier.  Come up with ranking system for stock selection based off selected SHAP features.</p>
+          <p>Classification report Class 0 is top 50% performers (I do for a range of percentiles up to top 25%).  We use all features (35 in this instance) for random forest classification.  This example, we have a maximum depth of 3.  Ideally we which to see a higher precision for top performers.</p>
+          <p><img src="../../graphics/class_report_2_bucket_sf1.PNG"></p>
+          <p>Using random forest feature importance (we can tune RFE to reduce number of features; in this example we have all of them).</p>
+          <p><img src="../../graphics/feature_importances.PNG"></p>
+          <p>Using SHAP to find direction and significance of each feature.  To do: Clearly certain values intuitively make sense.  However, there are strong features that don't such as book value/share.</p>
+          <p><img src="../../graphics/SHAP.PNG"></p>
           <h4>Jul 2024 Update</h4>
           <p>Completed database construction and calculation of EPV (using Bruce Greenwald's formulae) and first pass at feature selection using decision tree classifer.  Using gridsearch to limit tree depth to prevent overfitting.  Trying to map quintiles of features to quintiles of stock total return performance in specified time periods.  First pass results (Features are still being selected.  Some features for current output seem to be nonsensical..)</p>
           <p><img src="../../graphics/first_stab.PNG"></p>
@@ -159,8 +167,10 @@
                 <li>Random Forest</li>
                 <li>Convolutional Neural Networks (CNN)</li>
                 <li>Generative Adversarial Networks (GAN)</li>
-                <li>Future coursework: NLP</li>
-                <li>Future coursework: LLMs</li>
+                <li>NLP</li>
+                <li>LLMs</li>
+                <li>Transformers</li>
+
               </ul>
             </div>
           </div>
