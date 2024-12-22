@@ -35,6 +35,7 @@
             <div class="side-panel__jump">
               <h4>Jump to</h4>
               <p><a href="#financeprojects">Finance Projects</a><br/>
+                 <a href="#enterprisesoftwareprojects">Enterprise Solutions Software Projects</a><br/>
                  <a href="#machinelearningprojects">Machine Learning Projects</a><br/>
                  <a href="#cv">CV Summary</a><br/>
                  <a href="#education">Education</a><br/>
@@ -58,13 +59,17 @@
           <p> Personal projects related to finance that I am interested in.</p>
           <h3 id="valueinvesting">Value Investing Feature Analysis</h3><span class="year">2024 - </span>
           <h4>Dec 2024 Update</h4>
-          <p>Purchased SHARDAR SF1 Database Core Fundamentals Data (cleaned) from NASDAQ.  After processing, used Bruce Greenwald and Greenblatt calculations in bulk to generate company data per quarter (mix TTM and most recent).  Used Random Forest Classifer to try to predict if top percentile for future 10YR CAGR total return accross different depths and parameters.  F1 Scores are heading in the write direction (well above 0.5) and use SHAP values to measure best features for outperformance.  To do: understand why certain values may be important.  Continue to tune params to find best classifier.  Come up with ranking system for stock selection based off selected SHAP features.</p>
-          <p>Classification report Class 0 is top 50% performers (I do for a range of percentiles up to top 25%).  We use all features (35 in this instance) for random forest classification.  This example, we have a maximum depth of 3.  Ideally we which to see a higher precision for top performers.</p>
+          <p>Purchased SHARDAR SF1 Database Core Fundamentals Data (cleaned) from NASDAQ.  After processing, used Bruce Greenwald and Greenblatt calculations in bulk to generate company data per quarter (mix TTM and most recent).  Used Random Forest Classifer to try to predict if top percentile for future 10YR CAGR total return accross different depths and parameters.  F1 Scores are heading in the right direction (well above 0.5) and use SHAP values to measure best features for outperformance.  To do: understand why certain values may be important.  Continue to tune params to find best classifier.  Come up with ranking system for stock selection based off selected SHAP features.</p>
+          <p>An example snippet is below: Classification report Class 0 is top 50% performers (I do for a range of percentiles up to top 25%).  We use all features (35 in this instance) for random forest classification.  This example, we have a maximum depth of 3.  Ideally we which to see a higher precision for top performers.</p>
           <p><img src="../../graphics/class_report_2_bucket_sf1.PNG"></p>
           <p>Using random forest feature importance (we can tune RFE to reduce number of features; in this example we have all of them).</p>
           <p><img src="../../graphics/feature_importances.PNG"></p>
           <p>Using SHAP to find direction and significance of each feature.  To do: Clearly certain values intuitively make sense.  However, there are strong features that don't such as book value/share.</p>
           <p><img src="../../graphics/SHAP.PNG"></p>
+          <p>After running a myriad of scenarios, we can pick parameters that give either the best precision (false negatives are okay in stock selection; we only want to make sure that the stocks we pick are winners and don't care as much about missing some winners) or best F1 score (best all round prediction results).  Highlighted below are the two scenarios</p>
+          <p><img src="../../graphics/precision_scores_avg.PNG"></p>
+          <p>Parameters for highest average precision: aiming for top 33% forward 10 year performers; min points per terminal leaf is 8; depth of tree for random forest is 3.  Focusing on the results with the highest average precision, we can look across time to see what the precision was for different quarters.  Precision can get above 0.7 in certain quarters, which means 70% of positives we predict end up being true postives.  In a diversified portfolio, we should see outperformance to the market.  To do: backtest with stocks predicted to see performance vs. market.  Periods in which we know deep discounts occured (such as 2008 and 2009) should be prioritized.  We notice in periods of sustained bull market, our precision is not as good (2011 onwards).  To do: see the most important features and average features of top predicted performers vs. bottom performers and come up with ranking algorithm.</p>
+          <p><img src="../../graphics/class_report_best_top_depth_3.PNG"></p>
           <h4>Jul 2024 Update</h4>
           <p>Completed database construction and calculation of EPV (using Bruce Greenwald's formulae) and first pass at feature selection using decision tree classifer.  Using gridsearch to limit tree depth to prevent overfitting.  Trying to map quintiles of features to quintiles of stock total return performance in specified time periods.  First pass results (Features are still being selected.  Some features for current output seem to be nonsensical..)</p>
           <p><img src="../../graphics/first_stab.PNG"></p>
@@ -79,6 +84,22 @@
           <p>TBD</p>
           <!-- <p>Visit <a href="https://play.google.com/store/apps/details?id=dk.ejendomstorvet.android&amp;hl=en" target="_blank">Ejendomstorvet Android</a></p> -->
           <!-- <p>Visit <a href="https://psohappy.org" target="_blank">psohappy.org</a></p> -->
+          <h2 id="enterprisesolutionssoftware">Enterprise Solutions Software Projects</h2>
+          <p>Software that I have programmed to tackle certain enterprise problems (outside of my job).</p>
+          <h3 id="mipscheduler">Employee Optimal Shift Scheduler</h3><span class="year">Aug 2024</span>
+          <p>My fiancée worked as an HR manager at a fast food restaurant.  She told me that the manager and team manually created each week's schedule for two teams of roughly 75 employees each, which on average took up more than 12 hours each week.  So I wrote a desktop app to do it for them.</p>
+          <p>It was a very interesting problem as it can be viewed as a mixed-integer constraint optimization problem, meaning that the problem is NP-hard.  Took a lot of time to reduce contraints and set up the problem to handle the myriad of contraints (see constraints in the screenshot below).  Was able to create optimal (or close to optimal) schedules that minimized costs and maximized employee satisfaction.</p>
+          <p>Problem was tackled into several steps as there were quite a few constraints.</p>
+          <p><img src="../../graphics/constraints.PNG"></p>
+          <p>Software was built with a full GUI using customTkinter.</p>
+          <p>Source code was obfucated and compiled using Cython into an exe for release.</p>
+          <p>Licensing feature and passcode was handled using Cryptolens.</p>
+          <p><img src="../../graphics/license_agreement.PNG"></p>
+          <p><img src="../../graphics/schift_scheduler_app.PNG"></p>
+          <p>Summary output generated for the managers to see for each person what his or her shifts were.</p>
+          <p><img src="../../graphics/schedule_output2.PNG"></p>
+          <p>Time Series output generated for the managers for each point in time, who is staffed at what role.</p>
+          <p><img src="../../graphics/schedule_output1.PNG"></p>
           
           <h2 id="machinelearningprojects">Machine Learning Personal Projects</h2>
           <p>Personal projects related to machine that I am interested in or projects I have implemented in class.</p>
@@ -102,7 +123,8 @@
           <h3 id="cnn">Conditional Generative Adversarial Network Bottle Image Generation</h3><span class="year">Jun 2024</span>
           <h4>Using a simple cGAN architecture to generate images of partially filled bottles (using labels 0-4 to indicate how much liquid in bottle) after 100 epochs.</h4>
           <p><img src="../../graphics/generated_bottles_CGAN.PNG"></p>
-          
+
+
           <h2 id="cv">CV Summary</h2>
           <h3>Paloma Partners/Cannae Portfolio Advisers</h3><span class="year">2019 - Present</span>
           <p><b>Securitized Products Trading</b></p>
@@ -192,9 +214,14 @@
           <p><a href="../../files/IntoTheDarkness.zip">Click here to download a zip file of my game.  Just unzip and click on the exe to enjoy!</a></p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/dHL1_9AkPUE?si=byF9f-eWj-XiXMOX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>          <!-- <p>Visit <a href="https://play.google.com/store/apps/details?id=dk.ejendomstorvet.android&amp;hl=en" target="_blank">Ejendomstorvet Android</a></p> -->
           
-
           <h2 id="personal">A personal note</h2>
           <p>I enjoy tennis, economics, writing, singing, playing the guitar, swing dancing, programming, and playing video games.</p>
+          <p>Listen to me sing <strong>Suspicious Minds</strong> during a rehearsal.  Guitar and lead vocals: me.  Bass and supporing vocals: Catherine LeClair.</p>
+          <audio controls>
+            <source src="../../files/New Recording 239.m4a" type="audio/m4a">
+            Your browser does not support the audio element.
+          </audio>
+
         </div>
       </div>
     </div>
