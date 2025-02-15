@@ -57,25 +57,60 @@
           
           <h2 id="financeprojects">Finance Related Personal Projects</h2>
           <p> Personal projects related to finance that I am interested in.</p>
-          <h3 id="valueinvesting">Value Investing Feature Analysis</h3><span class="year">2024 - </span>
+          <h3 id="valueinvesting">Value Investing Feature Analysis</h3><span class="year">2024 - present</span>
+          
+          <h4>Feb 2025 Update</h4>
+          <p> 
+              I ran different parameters using 2 models.  Random Forest and XGBoost Classifiers.  With models that performed the best (best F1, best precision), etc., I logged by hand the best features across different regimes: GFC, post-GFC, etc.
+              <p><img src="../../graphics/features_compile.png"></p>
+              Then, rather unscientifically, I selected what features seem to be perennial features that offer the best signal for future 10 year CAGR performance.  Feature selection was guided by 3 ranking methods:</p>
+            <p>1. Feature importances from ML model averaged overtime</p>
+            <p><img src="../../graphics/feature_combined_importances.png"></p>
+            <p>2. Shapley values from ML model</p>
+            <p><img src="../../graphics/SHAP.png"></p>
+            <p>3. Distance per feature of median top quartile performers vs median bottom quartile performers in units if IQR</p>
+            <p><img src="../../graphics/feature_iqr.png.PNG"></p>
+          <p>Once features are selected a selection criteria is formed.  Features selected fall into 2 categories:
+            <p>1. A good score for this feature is a MUST.  If below a threshold, it is eliminated.  Thresholds are unscientifically chosen.  We eyeball certain metrics and select them based off prior knowledge of what constitutes a bad score.</p>
+            <p>2. A good score for this feature is nice to have and increases the rank of the stock, but a bad score does not eliminate it so long as good scores for other features are high enough.</p>
+          <p>Stocks that above a cutoff are selected in a portfolio.  Right now the portfolio is re-balanced each month according to rankings.</p>
+          <p><img src="../../graphics/selected_history.png"></p>
+          <p>Initial testing on the current Russell 3000 Index of stocks ~2,400 stocks with complete information yields promising results:</p>
+          <p>Over 20+ years, portfolio CAGR is <strong>22.51%</strong> vs SPX TR 10.38%.  Sharpe of <strong>1.06</strong> vs SPX TR Sharpe of 0.47.</p>
+          <p><img src="../../graphics/port_baktest_result1.png"></p>
+          <p><img src="../../graphics/port_baktest_result2.png"></p>
+          <p>A couple of potential weaknesses that could harm the validity of results:</p>
+            <p>1. Models are run using 80/20 Test/Train Split for each period throughout the last 20 years.  While our final scoring system does not directly rely on model predictions, the features selected are.  
+                 I do not know whether this means there is contamination doing the back-test this way.  I don't think so, but it is something that needs to be explored.</p>
+            <p>2. The universe for selection is the Russell 3000 as of June 2024.  There could be bias in the sense that there are only ~500 stocks in 2003 that are in the Russell 3000 today.  
+                We could have some sort of survivorship bias in that the stocks that exist in Russell 3000 today that were around during 2003 were the ones that did well and can affect positively back-testing results.  There are a few mitigating factors:
+                First, 500 stocks is still a lot and our scoring system managed to pick up the best performing ones back then.  There were still many potential "dogs" that underperformed for 10+ that were avoided successfully.  
+                Second, a larger test is currently being done with all stocks that had reporting data post 2003.  This universe is ~8,400 stocks.  It takes forever to run.  That is being addressed and implimented.</p>
+          <p>TO DO:</p>
+              <p>1. Re-test portfolio using ~8,400 stocks.  This addresses both weakness 1 and 2 because now our training set is only the Russell 3000 stocks and our testing set includes over 6,000 more stocks (although I'm not excluding the Russell stocks, it is a much better place to start).</p>
+              <p>2. Make the code more efficient such that when new quarterly reports are out, I'm not wasting computational time (and our value features are very much computationally expensive) re-calculating already calculated features.  Easier said than done as a lot of features are lookback.
+                    This makes it much more feasible to run during an on-going basis.</p>   
+              <p>3. Once 1 and 2 are done (and the test results continue to be promising), I can turn back on the live data feed and begin purchasing stocks live.</p>
+          <p>An example snippet is below: Classification report Class 0 is top 50% performers (I do for a range of percentiles up to top 25%).  I use all features (35 in this instance) for random forest classification.  This example, we have a maximum depth of 3.  Ideally we which to see a higher precision for top performers.</p>
+          <p><img src="../../graphics/class_report_2_bucket_sf1.PNG"></p>
           <h4>Dec 2024 Update</h4>
-          <p>I purchased SHARDAR SF1 Database Core Fundamentals Data (cleaned) from NASDAQ.  I used SQLite and sqlalchemy to handle storing and quering of data.  After processing, I used Bruce Greenwald and Joel Greenblatt formulae to calculate company performance data in bulk per quarter (a mix of TTM and most recent data).  I used the Random Forest Classifer to try to predict if a ticker will be in the top percentile for future 10YR CAGR total returns accross different depths and parameters.  F1 Scores and precisions were calculated.  Then I used SHAP values to measure best features for outperformance.</p>
+          <p>I purchased SHARDAR SF1 Database Core Fundamentals Data (cleaned) from NASDAQ.  I used SQLite and sqlalchemy to handle storing and querying of data.  After processing, I used Bruce Greenwald and Joel Greenblatt formulae to calculate company performance data in bulk per quarter (a mix of TTM and most recent data).  I used the Random Forest Classifier to try to predict if a ticker will be in the top percentile for future 10YR CAGR total returns across different depths and parameters.  F1 Scores and precisions were calculated.  Then I used SHAP values to measure best features for outperformance.</p>
           <p>An example snippet is below: Classification report Class 0 is top 50% performers (I do for a range of percentiles up to top 25%).  I use all features (35 in this instance) for random forest classification.  This example, we have a maximum depth of 3.  Ideally we which to see a higher precision for top performers.</p>
           <p><img src="../../graphics/class_report_2_bucket_sf1.PNG"></p>
           <p>Here are the random forest model's feature importances (we can tune RFE to reduce number of features; in this example we have all of them).</p>
           <p><img src="../../graphics/feature_importances.PNG"></p>
-          <p>Using SHAP to find direction and significance of each feature.  To do: Certain values intuitively make sense (eg. high 5 year trailing ROIC is good).  However, there are strong features that don't such as book value/share.  I need to analyze these features to see why they would be so important.</p>
+          <p>Using SHAP to find direction and significance of each feature.</p>
           <p><img src="../../graphics/SHAP.PNG"></p>
           <p>After running a myriad of scenarios, we can pick parameters that give either the best precision (false negatives are okay in stock selection; we only want to make sure that the stocks we pick are winners and don't care as much about missing some winners.  Ie. false positives are the most dangerous.) or best F1 score (best all round prediction results).  Highlighted below are the two sets of parameters that gave the best results.</p>
           <p><img src="../../graphics/precision_scores_avg.PNG"></p>
-          <p>Parameters for highest average precision: aiming for top 33% forward 10 year performers; min points per terminal leaf node is 8; depth of tree for random forest is 3.  Focusing on the results with the highest average precision, we can look across time to see what the precision was for different quarters.  Precision can get above 0.7 in certain quarters, which means 70% of positives we predict end up being true postives.  In a diversified portfolio, we should see outperformance to the market.  To do: Backtest with stocks predicted to see performance vs. market.  Periods in which we know deep discounts occured (such as 2008 and 2009) should be prioritized.  We notice in periods of a sustained bull market, our precision is not as good (2011 onwards).  To do: See the most important features and average features of top predicted performers vs. bottom performers and come up with ranking algorithm.</p>
+          <p>Parameters for highest average precision: aiming for top 33% forward 10 year performers; min points per terminal leaf node is 8; depth of tree for random forest is 3.  Focusing on the results with the highest average precision, we can look across time to see what the precision was for different quarters.  Precision can get above 0.7 in certain quarters, which means 70% of positives we predict end up being true positives.  In a diversified portfolio, we should see outperformance to the market.  To do: Backtest with stocks predicted to see performance vs. market.  Periods in which we know deep discounts occured (such as 2008 and 2009) should be prioritized.  We notice in periods of a sustained bull market, our precision is not as good (2011 onwards).  To do: See the most important features and average features of top predicted performers vs. bottom performers and come up with ranking algorithm.</p>
           <p><img src="../../graphics/class_report_best_top_depth_3.PNG"></p>
           <h4>Jul 2024 Update</h4>
-          <p>Completed database construction using free API and data from discountingcashflows.com and calculation of EPV (using Bruce Greenwald's formulae) and first pass at feature selection using decision tree classifer.  Using gridsearch to limit tree depth to prevent overfitting.  Trying to map quintiles of features to quintiles of stock total return performance in specified time periods.  First pass results (Features are still being selected.  Some features for current output seem to be nonsensical..)</p>
+          <p>Completed database construction using free API and data from discountingcashflows.com and calculation of EPV (using Bruce Greenwald's formulae) and first pass at feature selection using decision tree classifier.  Using gridsearch to limit tree depth to prevent overfitting.  Trying to map quintiles of features to quintiles of stock total return performance in specified time periods.  First pass results (Features are still being selected.  Some features for current output seem to be nonsensical..)</p>
           <p><img src="../../graphics/first_stab.PNG"></p>
           <p><img src="../../graphics/decision_tree1.PNG"></p>
           <!-- <p>Visit <a href="https://reppio.co" target="_blank">reppio.co</a></p> -->
-          <h3 id="MC"> Monte Carlo Options Pricing Excercise</h3><span class="year">2024 -</span>
+          <h3 id="MC"> Monte Carlo Options Pricing Exercise</h3><span class="year">2024 -</span>
           <h4>TBD</h4>
           <p>TBD</p>
           <!-- <p>Visit <a href="https://play.google.com/store/apps/details?id=dk.ejendomstorvet.android&amp;hl=en" target="_blank">Ejendomstorvet Android</a></p> -->
@@ -88,7 +123,7 @@
           <p>Software that I have programmed to tackle certain enterprise problems (outside of my job).</p>
           <h3 id="mipscheduler">Employee Optimal Shift Scheduler</h3><span class="year">Aug 2024</span>
           <p>My fiancée worked as an HR manager at a fast food restaurant.  She told me that the manager and team manually created each week's schedule for two teams of roughly 75 employees each, which on average took up more than 12 hours each week.  So I wrote a desktop app to do it for them.</p>
-          <p>It was a very interesting problem as it can be viewed as a mixed-integer constraint optimization problem, meaning that the problem is NP-hard.  Took a lot of time to reduce contraints and set up the problem to handle the myriad of contraints (see constraints in the screenshot below).  Was able to create optimal (or close to optimal) schedules that minimized costs and maximized employee satisfaction.</p>
+          <p>It was a very interesting problem as it can be viewed as a mixed-integer constraint optimization problem, meaning that the problem is NP-hard.  Took a lot of time to reduce constraints and set up the problem to handle the myriad of constraints (see constraints in the screenshot below).  Was able to create optimal (or close to optimal) schedules that minimized costs and maximized employee satisfaction.</p>
           <p>The problem was broken into several steps as there were quite a few constraints.</p>
           <p><img src="../../graphics/constraints.PNG"></p>
           <p>Software was built with a full GUI using customTkinter.</p>
@@ -107,15 +142,15 @@
           
           <h2 id="machinelearningprojects">Machine Learning Personal Projects</h2>
           <p>Personal projects related to machine that I am interested in or projects I have implemented in class.</p>
-          <p>Before that, however, here's my obligatory commment on machine learning and AI:</p>
+          <p>Before that, however, here's my obligatory comment on machine learning and AI:</p>
           <p>Everyone these days likes to talk about AI but before I try to tackle a problem with a 1.8 trillion parameter large-language model, have I considered...</p>
           <ol>
              <li><b>Using a decision tree to help automate security selection to add to the portfolio?</b></li>
              <p>Considering that once we know what the returns and risk profile of an individual security is, we technically can list all of the securities we bought and learn features that we actually care about.  Perhaps this will make explicit the features we care about and add explainability and consistency to our investment decisions.</p>
              <li><b>Building a scraper to collect OTC trading data and using a linear regression (or if needed, gradient boosting) to find relationships between two datasets before trying more complicated non-linear relationships?</b></li>
-             <p>Machine learning requires data--preferably a lot of it.  While there is a tremendous amount of data available, a lot is not easily accessable in structured finance.  However, some trading data is publically sent out by the dealers and if you collect that systematically, you'll soon find you actually have quite a bit of data!  My ML teacher once said something to effect of, “Linear regression is awesome.  Linear regression solves a lot of problems.  If the data is not linear, try to transform it to be linear.  Use Linear Regression before you try something more complicated.  Don't kill mosquitos with cannons.”</p>
+             <p>Machine learning requires data--preferably a lot of it.  While there is a tremendous amount of data available, a lot is not easily accessible in structured finance.  However, some trading data is publicly sent out by the dealers and if you collect that systematically, you'll soon find you actually have quite a bit of data!  My ML teacher once said something to effect of, “Linear regression is awesome.  Linear regression solves a lot of problems.  If the data is not linear, try to transform it to be linear.  Use Linear Regression before you try something more complicated.  Don't kill mosquitos with cannons.”</p>
              <li><b>Using fuzzy matching to tackle record linkage (ie. mapping different spellings and acronyms of company names to the same label)?</b></li>
-             <p>Eg. AAL, Amercain Air Lines, American Airlines, American Airline, American Airlines Group Inc., American Airlines Group Incorporated...okay, this problem might actually require use of LLMs or word embeddings.  Perhaps a future HuggingFace project?</p>
+             <p>Eg. AAL, American Air Lines, American Airlines, American Airline, American Airlines Group Inc., American Airlines Group Incorporated...okay, this problem might actually require use of LLMs or word embeddings.  Perhaps a future HuggingFace project?</p>
           </ol>
           <h3 id="svm">Image Classification Using Support Vector Machines</h3><span class="year">Apr 2024</span>
           <h4>Using SVM to classify images with ~30% accuracy.</h4>
@@ -144,9 +179,9 @@
           <p><b>Bachelor of Science in Business Administration: Track in Finance, Double Major in Computer Science with University Honors</b></p>
           <p>GPA 3.93/4.0</p>
 
-          <p><b>Academic Awards and Honors</b> - Some stuff I've acheived throughout the years that I am proud of.</p>
+          <p><b>Academic Awards and Honors</b> - Some stuff I've achieved throughout the years that I am proud of.</p>
           <p><a href="https://poetsandquantsforundergrads.com/students/2018-best-brightest-benjamin-chang-carnegie-mellon-university-tepper/">Poets and Quants: Best and Brightest Business Majors - Class of 2017 (click to see profile)</a></p>
-          <p><a href="https://www.cmu.edu/engage/give/donor-recognition/andrew-carnegie-society/acs-scholars.html">Andrew Canegie Society Scholar - Class of 2017</a></p>
+          <p><a href="https://www.cmu.edu/engage/give/donor-recognition/andrew-carnegie-society/acs-scholars.html">Andrew Carnegie Society Scholar - Class of 2017</a></p>
           <p><a href="https://www.betagammasigma.org/home">Beta Gamma Sigma Honor Society</a></p>
           <p><a href="https://www.phikappaphi.org/">Phi Kappa Phi Honor Society</a></p>
           <p><a href="https://www.pbk.org/">Phi Beta Kappa Honor Society</a></p>           
